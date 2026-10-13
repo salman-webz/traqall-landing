@@ -29,7 +29,14 @@ const swiperOptions = {
 
 }
 
+import { submitQuotation } from '@/api/services/quotationService.mjs'
+import { quotationPayload } from '@/api/formPayloads.mjs'
+import useFormSubmission from '@/hooks/useFormSubmission'
+import SubmissionFeedback from '@/components/forms/SubmissionFeedback'
+
 export default function Banner() {
+    const submission = useFormSubmission(submitQuotation, quotationPayload)
+
     const [isOpen, setOpen] = useState(false)
     return (
         <>
@@ -166,20 +173,21 @@ export default function Banner() {
                 <div className="title-box">
                     <h2>Request A Free Estimate</h2>
                 </div>
-                <form method="post" action="/">
+                <form onSubmit={submission.onSubmit} aria-busy={submission.isSubmitting} aria-describedby={submission.feedbackId}>
+                                <fieldset disabled={submission.isSubmitting}>
                     <div className="form-group">
-                        <input type="text" name="username" placeholder="Your Name" required=""/>
+                        <input type="text" name="username" aria-label="Your Name" placeholder="Your Name" required=""/>
                     </div>
                     <div className="form-group">
-                        <input type="email" placeholder="Email Address"  name="form_email" required=""/>
+                        <input type="email" placeholder="Email Address"  name="form_email" aria-label="Email Address" required=""/>
                     </div>
                     <div className="form-group">
-                        <input type="text" name="date"  placeholder="Inspection Date" id="datepicker"/>
+                        <input type="text" name="date" aria-label="Inspection Date"  placeholder="Inspection Date" id="datepicker"/>
                     </div>
                     <div className="form-group">
                         <div className="select-box">
-                            <select className="selectmenu wide">
-                                <option >You Location</option>
+                            <select name="location" aria-label="Location" className="selectmenu wide">
+                                <option value="">You Location</option>
                                 <option>Saudi Arabia</option>
                                 <option>Bangladesh </option>
                                 <option>Pakistan</option>
@@ -192,8 +200,8 @@ export default function Banner() {
                     <div className="row">
                         <div className="col-xl-12">
                             <div className="button-box">
-                                <button className="thm-btn" type="submit" data-loading-text="Please wait...">
-                                    Make An Appintment
+                                <button className="thm-btn" type="submit" disabled={submission.isSubmitting}>
+                                    {submission.isSubmitting ? 'Sending…' : 'Make An Appintment'}
                                     <span className="hover-btn hover-bx"></span>
                                     <span className="hover-btn hover-bx2"></span>
                                     <span className="hover-btn hover-bx3"></span>
@@ -202,7 +210,9 @@ export default function Banner() {
                             </div>
                         </div>
                     </div>
-                </form>
+                </fieldset>
+                                <SubmissionFeedback submission={submission} />
+                            </form>
             </div>
         </section>
         {/* End Main Slider Three*/}

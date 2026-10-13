@@ -1852,7 +1852,9 @@ html:has(.home-landing) {
   }
 
   .module-fullscreen__panel-visual {
-    display: none;
+    display: block;
+    width: 100%;
+    min-width: 0;
   }
 
   .module-fullscreen__texture-shape {
@@ -1988,4 +1990,124 @@ html:has(.home-landing) {
   aspect-ratio: 3 / 2;
   object-fit: contain;
   transform: none;
+}
+
+/* Mobile slides occupy one viewport, with centered copy and fixed navigation. */
+@media (max-width: 767px) {
+  .home-landing__slider {
+    height: 100vh;
+    height: 100dvh;
+    max-height: 100dvh;
+  }
+
+  .module-fullscreen {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .module-fullscreen__track {
+    flex: 1;
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  .module-fullscreen__panel {
+    height: 100%;
+    overflow-y: auto;
+  }
+
+  .module-fullscreen__panel-inner {
+    min-height: 100%;
+    padding: 24px 16px;
+    align-items: center;
+  }
+
+  .module-fullscreen__texture-bg,
+  .module-fullscreen .module-fullscreen__highlights {
+    display: none;
+  }
+
+  .module-fullscreen__panel-visual,
+  .module-fullscreen .traqall-hero__visual-col {
+    display: flex;
+    justify-content: center;
+    margin-inline: auto;
+  }
+
+  .module-fullscreen__panel-copy {
+    text-align: center;
+    margin-inline: auto;
+  }
+
+  .module-fullscreen__icon {
+    margin-inline: auto;
+  }
+
+  .module-fullscreen__features {
+    display: inline-block;
+    text-align: left;
+  }
+
+  .module-fullscreen__panel-layout {
+    justify-items: center;
+    gap: 20px;
+  }
+
+  .module-fullscreen__panel--hero .traqall-hero__content {
+    text-align: center;
+  }
+
+  .module-fullscreen__panel--hero .traqall-hero-panel {
+    min-height: 100%;
+  }
+
+  .module-fullscreen__panel--hero .traqall-hero__grid {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+
+  .module-fullscreen__mobile-nav {
+    position: relative;
+    flex-shrink: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .module-fullscreen__panel--hero .traqall-hero__visual-col {
+    display: none;
+  }
+}
+
+.traqall-contact-form {
+  padding: clamp(24px, 4vw, 40px);
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  background: #fff;
+}
+.traqall-contact-form form { margin-top: 24px; }
+.traqall-contact-form label { display: block; margin-bottom: 6px; color: var(--billdins-black); font-weight: 600; }
+.traqall-contact-form input,
+.traqall-contact-form textarea {
+  display: block;
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 20px;
+  border: 1px solid #cbd5e1;
+  border-radius: 5px;
+  background: #f8f9fa;
+  color: var(--billdins-black);
+}
+.traqall-contact-form textarea { resize: vertical; }
+.traqall-contact-form input:focus-visible,
+.traqall-contact-form textarea:focus-visible { outline: 2px solid var(--billdins-gold); outline-offset: 2px; }
+.traqall-contact-form button:disabled { opacity: .65; cursor: wait; }
+.traqall-contact-form .submission-feedback:not(:empty) { margin-top: 16px; }
+@media (max-width: 991px) { .traqall-contact-form { margin-top: 32px; } }
+
+.appoinment-one--contact .container { max-width: 1170px; }
+.appoinment-one--contact .appoinment-one__contact { float: none; margin: 0 auto; max-width: 385px; padding-right: 60px; }
+@media (max-width: 767px) {
+  .appoinment-one--contact .appoinment-one__contact { padding-right: 0; }
 }

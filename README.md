@@ -57,3 +57,7 @@ npm run build
 ```
 
 See `RECOVERY-STATUS.md` for recovery details. The Contact page currently uses email links; it does not submit through an application backend. Legacy account, cart, checkout, and other template screens are included as supplied; restoring their files does not add authentication, payment processing, or other backend services.
+
+## Form API
+
+Set `NEXT_PUBLIC_API_BASE_URL` using `.env.example` before building. See [API integration](docs/api-integration.md) for the form inventory, provisional endpoints, payload mappings, response contract and backend confirmation checklist.

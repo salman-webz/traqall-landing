@@ -1,17 +1,24 @@
 'use client'
 import Link from "next/link"
 import { HOME_ASSETS } from "@/lib/home-assets"
-export default function Appoinment() {
+import { submitContact } from '@/api/services/contactService.mjs'
+import { contactPayload } from '@/api/formPayloads.mjs'
+import useFormSubmission from '@/hooks/useFormSubmission'
+import SubmissionFeedback from '@/components/forms/SubmissionFeedback'
+
+export default function Appoinment({ contactPage = false }) {
+    const submission = useFormSubmission(submitContact, contactPayload)
+
     return (
         <>
         {/* Start Appoinment One*/} 
-        <section className="appoinment-one">
+        <section className={`appoinment-one${contactPage ? " appoinment-one--contact" : ""}`}>
             <div className="appoinment-one__pattern"
-                style={{ backgroundImage: ' url(assets/images/pattern/appoinment-v1-pattern.png)' }}></div>
-            <div className="shape1"></div>
-            <div className="appoinment-one__bg"
+                style={{ backgroundImage: ' url(/assets/images/pattern/appoinment-v1-pattern.png)' }}></div>
+            {!contactPage && <div className="shape1"></div>}
+            {!contactPage && <div className="appoinment-one__bg"
                 style={{ backgroundImage: ` url(${HOME_ASSETS.appointmentBg})` }}>
-            </div>
+            </div>}
             <div className="container">
                 <div className="row">
                     {/* Start Appoinment One Left*/} 
@@ -71,25 +78,26 @@ export default function Appoinment() {
                                 <p>We respond within 24 hours</p>
                             </div>
 
-                            <form method="post" action="/">
+                            <form onSubmit={submission.onSubmit} aria-busy={submission.isSubmitting} aria-describedby={submission.feedbackId}>
+                                <fieldset disabled={submission.isSubmitting}>
                                 <div className="form-group">
-                                    <input type="text" name="username" placeholder="Your Name" required=""/>
+                                    <input type="text" name="username" aria-label="Your Name" placeholder="Your Name" required=""/>
                                 </div>
                                 <div className="form-group">
-                                    <input type="email" placeholder="Email Address"  name="form_email"
+                                    <input type="email" placeholder="Email Address"  name="form_email" aria-label="Email Address"
                                         required=""/>
                                 </div>
                                 <div className="form-group">
-                                    <input type="text" name="phone" placeholder="Phone Number" required=""/>
+                                    <input type="tel" name="phone" aria-label="Phone Number" placeholder="Phone Number" required=""/>
                                 </div>
                                 <div className="form-group">
-                                    <textarea placeholder="Write Your Message"></textarea>
+                                    <textarea required={contactPage} name="message" aria-label="Your Message" placeholder="Write Your Message"></textarea>
                                 </div>
                                 <div className="row">
                                     <div className="col-xl-12">
                                         <div className="button-box">
-                                            <button className="thm-btn" type="submit" data-loading-text="Please wait...">
-                                                submit now
+                                            <button className="thm-btn" type="submit" disabled={submission.isSubmitting}>
+                                                {submission.isSubmitting ? 'Sending…' : 'submit now'}
                                                 <span className="hover-btn hover-bx"></span>
                                                 <span className="hover-btn hover-bx2"></span>
                                                 <span className="hover-btn hover-bx3"></span>
@@ -98,6 +106,8 @@ export default function Appoinment() {
                                         </div>
                                     </div>
                                 </div>
+                            </fieldset>
+                                <SubmissionFeedback submission={submission} />
                             </form>
                         </div>
                     </div>
