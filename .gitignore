@@ -1,0 +1,53 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Next.js
+.next/
+out/
+
+# Build / cache
+build/
+dist/
+.turbo/
+*.tsbuildinfo
+next-env.d.ts
+
+# Environment & secrets
+.env
+.env.*
+!.env.example
+
+# Logs & debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# OS & editors
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Python (image prep script)
+scripts/.pylibs/
+__pycache__/
+*.py[cod]
+.Python
+venv/
+.venv/
+
+# Vercel
+.vercel
+
+# Source image uploads are included for portable image preparation.
+
+# Original cloud files preserved during local recovery
+.icloud-source-backup/
+
+# Generated shareable archive
+builldings-source.zip
