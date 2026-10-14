@@ -91,9 +91,6 @@ export default function SolutionsMegaMenu() {
                                 </ul>
                             </div>
                         </div>
-                        <Link href="/services" className="solutions-mega__view-all">
-                            View all solutions <span className="icon-next" />
-                        </Link>
                     </div>
 
                     <div className="solutions-mega__sidebar">

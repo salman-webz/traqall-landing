@@ -20,9 +20,9 @@ const swiperOptions = {
     breakpoints: {
         320: { slidesPerView: 1 },
         575: { slidesPerView: 1 },
-        767: { slidesPerView: 1 },
-        991: { slidesPerView: 3 },
-        1199: { slidesPerView: 4 },
+        768: { slidesPerView: 2 },
+        992: { slidesPerView: 3 },
+        1200: { slidesPerView: 4 },
         1350: { slidesPerView: 4 },
     }
 }

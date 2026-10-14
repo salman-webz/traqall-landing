@@ -6,7 +6,7 @@ export default function BackToTop({ scroll }) {
             {scroll && (
                 
                 
-                <a href="#top" data-target="html" className="scroll-to-target scroll-to-top">
+                <a href="#top" aria-label="Back to top" data-target="html" className="scroll-to-target scroll-to-top">
                 <span className="scroll-to-top__wrapper"><span className="scroll-to-top__inner"></span></span>
                 <span className="scroll-to-top__text"> Go Back Top</span>
                 </a>

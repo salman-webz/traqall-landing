@@ -7,7 +7,7 @@ import About from '@/components/sections/home1/About'
 import { createLandingNavigation } from '@/lib/landing-navigation.mjs'
 
 const LAST_SLIDE_INDEX = 5
-const MOBILE_MAX_WIDTH = 767
+const MOBILE_MAX_WIDTH = 1199
 const DEFAULT_HEADER_OFFSET = 100
 
 function syncSiteHeaderHeight() {
@@ -94,7 +94,7 @@ export default function HomeLandingFlow() {
             // Capture swipes only while the slides can still move. At the last
             // slide, and once the page has scrolled, the browser should scroll.
             const captureSlides = window.scrollY <= 1 && index !== LAST_SLIDE_INDEX
-            slider.style.touchAction = captureSlides ? 'none' : 'pan-y'
+            slider.style.touchAction = !isMobile && captureSlides ? 'none' : 'pan-y'
         }
         const navigation = createLandingNavigation({
             getIndex: () => slideIndexRef.current,
@@ -133,26 +133,45 @@ export default function HomeLandingFlow() {
             '.mobile-menu-visible, .search-active, .side-content-visible'
         )
         const handleWheel = (event) => {
-            if (blocked()) return
+            if (blocked() || isMobile) return
             markGesturing()
             navigation.wheel(event, window.innerHeight)
         }
+        let compactTouch = null
         const handleTouchStart = (event) => {
             if (blocked()) return
             markGesturing()
             const onSlider = event.target instanceof Element &&
                 Boolean(event.target.closest('#home-landing-root .home-landing__slider'))
+            if (isMobile) {
+                compactTouch = onSlider && event.touches.length === 1
+                    ? { x: event.touches[0].clientX, y: event.touches[0].clientY }
+                    : null
+                return
+            }
             navigation.touchStart(event, true, onSlider)
         }
         const handleTouchMove = (event) => {
             if (blocked()) return
+            if (isMobile) {
+                if (event.touches.length !== 1) { compactTouch = null; return }
+                if (!compactTouch) return
+                const dx = compactTouch.x - event.touches[0].clientX
+                const dy = compactTouch.y - event.touches[0].clientY
+                if (Math.abs(dy) > 12 && Math.abs(dy) >= Math.abs(dx)) compactTouch = null
+                else if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) * 1.25) {
+                    navigation.select(slideIndexRef.current + Math.sign(dx))
+                    compactTouch = null
+                }
+                return
+            }
             markGesturing()
             navigation.touchMove(event)
         }
-        const handleTouchEnd = () => navigation.touchEnd()
+        const handleTouchEnd = () => { compactTouch = null; navigation.touchEnd() }
         let drag = null
         const handlePointerDown = (event) => {
-            if (event.pointerType !== 'mouse' || event.button !== 0 || blocked() || window.scrollY > 1 ||
+            if (event.pointerType !== 'mouse' || event.button !== 0 || blocked() || (!isMobile && window.scrollY > 1) ||
                 event.target.closest('a, button, input, textarea, select, [contenteditable="true"]')) return
             drag = { id: event.pointerId, x: event.clientX, y: event.clientY }
         }
@@ -161,7 +180,7 @@ export default function HomeLandingFlow() {
             const dx = drag.x - event.clientX
             const dy = drag.y - event.clientY
             drag = null
-            if (blocked() || window.scrollY > 1 || Math.abs(dx) < 50 || Math.abs(dx) < Math.abs(dy)) return
+            if (blocked() || (!isMobile && window.scrollY > 1) || Math.abs(dx) < 50 || Math.abs(dx) < Math.abs(dy)) return
             slider.focus({ preventScroll: true })
             navigation.select(slideIndexRef.current + Math.sign(dx))
         }
@@ -169,7 +188,8 @@ export default function HomeLandingFlow() {
         const preventImageDrag = (event) => { if (drag) event.preventDefault() }
         const handleKeyDown = (event) => {
             if (blocked() || event.defaultPrevented || event.altKey || event.ctrlKey || event.metaKey ||
-                window.scrollY > 1 || event.target.closest('input, textarea, select, [contenteditable="true"]')) return
+                (!isMobile && window.scrollY > 1) || event.target.closest('input, textarea, select, [contenteditable="true"]')) return
+            if (isMobile && !['ArrowLeft', 'ArrowRight'].includes(event.key)) return
             if (event.target !== document.body && !slider.contains(event.target)) return
             const direction = { ArrowRight: 1, ArrowDown: 1, PageDown: 1,
                 ArrowLeft: -1, ArrowUp: -1, PageUp: -1 }[event.key]
@@ -208,7 +228,7 @@ export default function HomeLandingFlow() {
             window.removeEventListener('touchcancel', handleTouchEnd)
             slider.style.touchAction = ''
         }
-    }, [isVideoOpen])
+    }, [isVideoOpen, isMobile])
 
     const goToSlide = useCallback((index) => navigationRef.current?.select(index), [])
 

@@ -56,7 +56,7 @@ export default function Layout({ headerStyle, footerStyle, headTitle, breadcrumb
             <DataBg />
             <div
                 className={`page-wrapper ${wrapperCls ? wrapperCls : ""}`}
-                id="#top"
+                id="top"
                 aria-hidden={isMobileMenu ? true : undefined}
             >
                 {hasHeader && <Header1 scroll={scroll} isMobileMenu={isMobileMenu} handleMobileMenu={toggleMobileMenu} handlePopup={handlePopup} isSidebar={isSidebar} handleSidebar={handleSidebar} />}

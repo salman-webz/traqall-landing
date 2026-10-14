@@ -33,8 +33,7 @@ body {
 }
 
 .pricing-one,
-.appoinment-one,
-.testimonial-one {
+.appoinment-one {
   background-color: var(--billdins-gray-bg);
 }
 
@@ -67,6 +66,16 @@ body {
 
 /* Buttons — brand yellow default, black hover */
 .thm-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 55px;
+  max-width: 100%;
+  padding: 14px 28px;
+  line-height: 1.4;
+  text-align: center;
+  vertical-align: middle;
   background: var(--billdins-gold);
   color: var(--billdins-white);
   border: 2px solid var(--billdins-gold);
@@ -215,13 +224,6 @@ a.thm-btn:hover i {
 }
 
 /* Testimonials */
-.testimonial-one__single-text p {
-  color: var(--billdins-gray);
-}
-
-.testimonial-one__single-author .content-box h2 {
-  color: var(--billdins-black);
-}
 
 /* FAQ */
 .faq-one .accrodion.active .accrodion-title h4,
@@ -815,6 +817,7 @@ body.mobile-menu-visible .stricky-header .mobile-nav__toggler {
   box-sizing: border-box;
   max-height: 45px;
   height: 45px;
+  min-height: 45px;
   line-height: 1;
   padding: 0 24px;
   background: var(--traqall-accent);
@@ -828,7 +831,7 @@ body.mobile-menu-visible .stricky-header .mobile-nav__toggler {
 
 .traqall-hero .thm-btn i {
   top: 0;
-  margin-left: 6px;
+  margin-left: 0;
   font-size: 14px;
 }
 
@@ -1247,7 +1250,7 @@ body.mobile-menu-visible .stricky-header .mobile-nav__toggler {
   width: 100%;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1200px) {
   /* Keep the original fullscreen placement behind the in-flow header. */
   .home-landing {
     margin-top: calc(-1 * var(--home-landing-header-height, 0px));
@@ -1730,7 +1733,7 @@ html:has(.home-landing) {
   }
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 1199px) {
   .home-landing__stage {
     position: relative;
     inset: auto;
@@ -1992,12 +1995,12 @@ html:has(.home-landing) {
   transform: none;
 }
 
-/* Mobile slides occupy one viewport, with centered copy and fixed navigation. */
-@media (max-width: 767px) {
+/* Compact slides keep their controls visible while content can scroll. */
+@media (max-width: 1199px) {
   .home-landing__slider {
-    height: 100vh;
-    height: 100dvh;
-    max-height: 100dvh;
+    height: calc(100svh - var(--home-landing-header-height, 90px));
+    min-height: 320px;
+    max-height: none;
   }
 
   .module-fullscreen {
@@ -2110,4 +2113,277 @@ html:has(.home-landing) {
 .appoinment-one--contact .appoinment-one__contact { float: none; margin: 0 auto; max-width: 385px; padding-right: 60px; }
 @media (max-width: 767px) {
   .appoinment-one--contact .appoinment-one__contact { padding-right: 0; }
+}
+
+/* Keep action labels and icon glyphs on the same center line at every width. */
+.thm-btn > i,
+.thm-btn > span[class^="icon-"],
+.blog-one__single-content .btn-box a > span[class^="icon-"] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: static;
+  margin: 0;
+  line-height: 1;
+}
+
+.blog-one__single-content .btn-box a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+}
+
+@media (max-width: 1199px) {
+  .module-fullscreen__panel-inner {
+    height: auto;
+    overflow: visible;
+  }
+
+  .module-fullscreen__panel--hero .traqall-hero-panel {
+    height: auto;
+  }
+
+  .module-fullscreen__mobile-nav {
+    padding-block: 10px;
+    gap: 4px;
+  }
+
+  .module-fullscreen__mobile-nav-dots {
+    gap: 2px;
+  }
+
+  .module-fullscreen__mobile-nav-dots button {
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 0;
+    background: transparent;
+  }
+
+  .module-fullscreen__mobile-nav-dots button::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #cbd5e1;
+  }
+
+  .module-fullscreen__mobile-nav-dots button.is-active {
+    background: transparent;
+    transform: none;
+  }
+
+  .module-fullscreen__mobile-nav-dots button.is-active::before {
+    background: var(--billdins-gold);
+    transform: scale(1.25);
+  }
+
+  .module-fullscreen__mobile-nav-dots button:focus-visible {
+    outline: 2px solid var(--billdins-black);
+    outline-offset: -4px;
+    border-radius: 8px;
+  }
+
+  .scroll-to-top {
+    right: 12px;
+    bottom: calc(12px + env(safe-area-inset-bottom, 0px));
+    width: 44px;
+    height: 44px;
+    justify-content: center;
+    transform: none;
+    border-radius: 50%;
+    background: var(--billdins-white);
+    color: var(--billdins-black);
+    box-shadow: 0 2px 12px #0002;
+  }
+
+  .scroll-to-top::before {
+    content: "↑";
+    font-size: 24px;
+    line-height: 1;
+  }
+
+  .scroll-to-top__wrapper,
+  .scroll-to-top__text {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .traqall-hero__actions.main-slider-one__single-btn,
+  .traqall-hero__trust {
+    align-items: center;
+  }
+
+  .appoinment-one__contact,
+  .appoinment-one--contact .appoinment-one__contact {
+    float: none;
+    max-width: none;
+    padding-right: 0;
+  }
+
+  .appoinment-one__contact-list {
+    max-width: none;
+  }
+
+  .appoinment-one__contact-list ul li {
+    padding: 22px 20px;
+  }
+
+  .appoinment-one__contact-list .content-box {
+    overflow-wrap: anywhere;
+  }
+
+  .appoinment-one__form {
+    padding: 40px 20px;
+  }
+
+  input, select, textarea {
+    font-size: 16px;
+  }
+}
+
+.site-footer__subscribe-form .subscribe-form button.thm-btn {
+  min-height: 59px;
+}
+
+@media (max-width: 767px) {
+  .faq-hub__search-wrap input,
+  .appoinment-one__form form .form-group input,
+  .appoinment-one__form form .form-group textarea {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 479px) {
+  .site-footer__subscribe-form .subscribe-form {
+    display: grid;
+    gap: 12px;
+  }
+
+  .site-footer__subscribe-form .subscribe-form input[type="email"] {
+    width: 100%;
+    padding-inline: 20px;
+  }
+
+  .site-footer__subscribe-form .subscribe-form button {
+    position: static;
+    width: 100%;
+    border-radius: 5px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .services-one__carousel {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .pricing-one__single .plan-box {
+    position: relative;
+    top: auto;
+    right: auto;
+    width: fit-content;
+    max-width: 100%;
+    margin: 0 0 20px auto;
+  }
+
+  .traqall-hero__description {
+    margin-inline: auto;
+  }
+
+  .traqall-hero__actions.main-slider-one__single-btn,
+  .traqall-hero__trust {
+    justify-content: center;
+  }
+
+  .traqall-hero__features {
+    max-width: 520px;
+    margin-inline: auto;
+    text-align: left;
+  }
+
+  .traqall-hero__content,
+  .traqall-hero__visual-col {
+    min-width: 0;
+  }
+
+  .sidebar__single .number-box h3 {
+    font-size: clamp(18px, 2.5vw, 24px);
+    overflow-wrap: anywhere;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .traqall-hero__features {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    max-width: none;
+    gap: 20px;
+  }
+
+  .traqall-hero__features li {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .appoinment-one__contact,
+  .appoinment-one--contact .appoinment-one__contact,
+  .appoinment-one__contact-list,
+  .appoinment-one__form {
+    float: none;
+    width: 100%;
+    max-width: none;
+    padding-right: 0;
+  }
+
+  .appoinment-one__form {
+    padding: 40px;
+  }
+
+  .appoinment-one__contact-list ul {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .appoinment-one__contact-list ul li:nth-child(n) {
+    margin: 0;
+    padding: 20px;
+  }
+
+  .appoinment-one__contact-list ul li .inner {
+    padding-left: 0;
+  }
+
+  .appoinment-one__contact-list ul li .inner .icon-box {
+    position: static;
+    margin-bottom: 16px;
+  }
+
+  .appoinment-one__contact-list .content-box {
+    overflow-wrap: anywhere;
+  }
+}
+
+.appoinment-one--contact .appoinment-one__form {
+  margin-top: 0;
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .appoinment-one__form {
+    margin-top: 0;
+    padding: 40px 28px;
+  }
+}
+
+@media (max-width: 991px) {
+  .appoinment-one--contact .appoinment-one__form {
+    margin-top: 40px;
+  }
 }
