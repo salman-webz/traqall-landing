@@ -739,3 +739,12 @@
 .site-footer__payment li a img {
     width: 100%;
 }
+.site-footer__middle--three-columns .footer-widget__contact {
+    margin-left: 0;
+}
+
+@media (min-width: 768px) {
+    .site-footer__middle--three-columns .footer-widget__contact {
+        margin-top: 0;
+    }
+}

@@ -19,6 +19,9 @@ export default function Menu() {
                 </li>
 
                 <li>
+                    <Link href="/small-issues">Small issues</Link>
+                </li>
+                <li>
                     <Link href="/faq">FAQ</Link>
                 </li>
                 <li>

@@ -116,14 +116,14 @@ export default function HeroTraqAllSlide({ onOpenVideo }) {
                                                 }
                                             }}
                                         >
-                                            See TraqAll in Action
+                                            See how TraqAll works
                                         </a>
                                     </div>
                                 </div>
                             </div>
 
                             <div className="traqall-hero__trust">
-                                <ul className="traqall-hero__trust-avatars">
+                                {/* <ul className="traqall-hero__trust-avatars">
                                     {TRUST_AVATARS.map((src, index) => (
                                         <li key={src}>
                                             <img
@@ -132,13 +132,8 @@ export default function HeroTraqAllSlide({ onOpenVideo }) {
                                             />
                                         </li>
                                     ))}
-                                </ul>
-                                <p>
-                                    <strong>Trusted by Construction Teams</strong>
-                                    <span>
-                                        to deliver projects on time and on budget.
-                                    </span>
-                                </p>
+                                </ul> */}
+                               
                             </div>
                         </div>
 

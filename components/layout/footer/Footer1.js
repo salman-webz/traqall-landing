@@ -1,14 +1,4 @@
 import Link from "next/link"
-import { SITE_ASSETS } from "@/lib/site-assets"
-
-const FOOTER_GALLERY = [
-    SITE_ASSETS.footerGallery1,
-    SITE_ASSETS.footerGallery2,
-    SITE_ASSETS.footerGallery3,
-    SITE_ASSETS.footerGallery4,
-    SITE_ASSETS.footerGallery5,
-    SITE_ASSETS.footerGallery6,
-]
 
 export default function Footer1() {
     return (
@@ -50,10 +40,10 @@ export default function Footer1() {
             {/* End Site Footer Top*/} 
 
             {/* Start Site Footer Middle*/} 
-            <div className="site-footer__middle">
+            <div className="site-footer__middle site-footer__middle--three-columns">
                 <div className="container">
                     <div className="row">
-                        <div className="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
+                        <div className="col-md-4 wow fadeInUp" data-wow-delay="100ms">
                             <div className="footer-widget__single footer-widget__services">
                                 <div className="title-box">
                                     <h2>Our Solutions</h2>
@@ -70,7 +60,7 @@ export default function Footer1() {
                             </div>
                         </div>
 
-                        <div className="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="200ms">
+                        <div className="col-md-4 wow fadeInUp" data-wow-delay="200ms">
                             <div className="footer-widget__single footer-widget__useful-links">
                                 <div className="title-box">
                                     <h2>Useful Links</h2>
@@ -87,7 +77,7 @@ export default function Footer1() {
                             </div>
                         </div>
 
-                        <div className="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="300ms">
+                        <div className="col-md-4 wow fadeInUp" data-wow-delay="300ms">
                             <div className="footer-widget__single footer-widget__contact">
                                 <div className="title-box">
                                     <h2>Contact Us</h2>
@@ -129,29 +119,6 @@ export default function Footer1() {
                             </div>
                         </div>
 
-                        <div className="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="400ms">
-                            <div className="footer-widget__single footer-widget__gallery">
-                                <div className="title-box">
-                                    <h2>Gallery</h2>
-                                    <div className="line"></div>
-                                </div>
-
-                                <ul className="footer-widget__gallery-list">
-                                    {FOOTER_GALLERY.map((src) => (
-                                        <li key={src}>
-                                            <div className="img-box">
-                                                <img src={src} alt="TraqAll operations module"/>
-                                                <div className="overlay-icon">
-                                                    <Link href="/services">
-                                                        <span className="icon-plus-1"></span>
-                                                    </Link>
-                                                </div>
-                                            </div>
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
