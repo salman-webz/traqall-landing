@@ -37,3 +37,34 @@ test('client response and failure handling', async t => {
  const controller=new AbortController();controller.abort()
  await assert.rejects(request('/contact',{...options,signal:controller.signal}),e=>e.code==='CANCELLED')
 })
+
+test('contact phone validation uses country-specific possible lengths', () => {
+ const payload = { name: 'Jane', email: 'jane@example.com', message: 'Demo please' }
+ for (const phone of ['+12133734253', '+442079460018']) {
+  assert.deepEqual(validatePayload({ ...payload, phone }), {})
+ }
+ for (const phone of ['+12133734', '+121337342531', '+999123456789']) {
+  assert.equal(validatePayload({ ...payload, phone }).phone, 'Invalid phone number length')
+ }
+ assert.equal(validatePayload({ ...payload, phone: '' }).phone, 'You have not entered a phone number')
+})
+
+test('direct demo API sends JSON without credentials and preserves API errors', async t => {
+ const originalFetch = globalThis.fetch
+ const originalLocation = Object.getOwnPropertyDescriptor(globalThis, 'location')
+ Object.defineProperty(globalThis, 'location', { configurable: true, value: { origin: 'http://localhost:3001' } })
+ t.after(() => {
+  globalThis.fetch = originalFetch
+  if (originalLocation) Object.defineProperty(globalThis, 'location', originalLocation)
+  else delete globalThis.location
+ })
+ globalThis.fetch = async (url, init) => {
+  assert.equal(String(url), 'https://api.traqall.com/api/v1/demo_requests')
+  assert.equal(init.method, 'POST')
+  assert.equal(init.headers['Content-Type'], 'application/json')
+  assert.equal(init.headers.Authorization, undefined)
+  assert.equal(init.credentials, 'omit')
+  return new Response(JSON.stringify({ error: 'Validation failed', messages: ['Name is required', 'Message is required'] }), { status: 422 })
+ }
+ await assert.rejects(request('/api/v1/demo_requests', { baseURL: 'https://api.traqall.com', data: {} }), error => error.status === 422 && error.message === 'Name is required Message is required')
+})

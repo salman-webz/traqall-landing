@@ -12,7 +12,7 @@ export async function request(endpoint, { data, signal, timeout = 15000, baseURL
     if (!baseURL) throw new ApiError('Submissions are not configured yet. Please contact support@traqall.com.', { code: 'CONFIGURATION' })
     let url
     try {
-        url = new URL(`${baseURL.replace(/\/+$/, '')}/${endpoint.replace(/^\/+/, '')}`)
+        url = new URL(`${baseURL.replace(/\/+$/, '')}/${endpoint.replace(/^\/+/, '')}`, globalThis.location?.origin)
         if (!['https:', 'http:'].includes(url.protocol) || url.username || url.password) throw new Error()
     } catch {
         throw new ApiError('The submission service is not configured correctly.', { code: 'CONFIGURATION' })
@@ -40,7 +40,8 @@ export async function request(endpoint, { data, signal, timeout = 15000, baseURL
         }
         if (!response.ok || body?.success === false) {
             const fields = body?.errors && typeof body.errors === 'object' && !Array.isArray(body.errors) ? body.errors : {}
-            throw new ApiError(typeof body?.message === 'string' ? body.message : 'Your submission could not be completed. Please try again later.', { status: response.status, fields })
+            const messages = Array.isArray(body?.messages) ? body.messages.filter(message => typeof message === 'string').join(' ') : ''
+            throw new ApiError(typeof body?.message === 'string' ? body.message : messages || 'Your submission could not be completed. Please try again later.', { status: response.status, fields })
         }
         return body
     } catch (error) {

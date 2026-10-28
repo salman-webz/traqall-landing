@@ -1,5 +1,5 @@
 import Layout from '@/components/layout/Layout'
-import Appoinment from '@/components/sections/home1/Appoinment'
+import Appoinment from '@/components/sections/home1/appointment'
 
 export const metadata = {
     title: 'Contact | TraqAll',

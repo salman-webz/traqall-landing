@@ -23,10 +23,10 @@ export default function useFormSubmission(service, buildPayload) {
         pending.current = controller
         setState({ status: 'pending', message: 'Sending your request…', fields: {} })
         try {
-            await service(payload, { signal: controller.signal })
+            const result = await service(payload, { signal: controller.signal })
             if (pending.current !== controller) return
             form.reset()
-            setState({ status: 'success', message: 'Thank you. Your request was received.', fields: {} })
+            setState({ status: 'success', message: typeof result?.message === 'string' && result.message.trim() ? result.message : 'Thank you. Your request was received.', fields: {} })
         } catch (error) {
             if (pending.current !== controller) return
             setState({ status: 'error', message: error.message || 'Unable to submit your request.', fields: error.fields || {} })
