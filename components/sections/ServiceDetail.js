@@ -37,7 +37,6 @@ export default function ServiceDetail({ service }) {
                         <div className="col-xl-8">
                             <div className="services-details__content">
                                 <div className="services-details__content-text1">
-                                    <h2>{service.title}</h2>
                                     <p className="text1">{service.intro}</p>
                                     <p className="text2">{service.introSecondary}</p>
                                 </div>

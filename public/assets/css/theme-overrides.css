@@ -2572,3 +2572,6 @@ html:has(.home-landing) {
 .main-header-one .main-header-one__top .header-style1__contact li .text p a:focus-visible {
   color: #e5cc00;
 }
+
+/* Keep module content close to the hero without repeating its title. */
+.product-hero + .services-details { padding-top: 60px; }

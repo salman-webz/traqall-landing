@@ -17,26 +17,20 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu, handle
                     <div className="main-header-one__top-inner">
                         <ul className="header-style1__contact">
                             <li>
-                                <div className="icon">
-                                    <i className="icon-clock"></i>
-                                </div>
                                 <div className="text">
-                                    <p>{CONTACT_INFO.hours}</p>
+                                    <p><i className="icon-clock"></i> &nbsp;&nbsp;{CONTACT_INFO.hours}</p>
                                 </div>
                             </li>
 
                             <li>
                                 <div className="text">
-                                    <p><i className="fa fa-envelope"></i><Link href={emailHref()}>{CONTACT_INFO.email}</Link></p>
+                                    <p><i className="fa fa-envelope"></i> &nbsp;&nbsp;<Link href={emailHref()}>{CONTACT_INFO.email}</Link></p>
                                 </div>
                             </li>
 
                             <li>
-                                <div className="icon">
-                                    <i className="icon-placeholder"></i>
-                                </div>
                                 <div className="text">
-                                    <p>{CONTACT_INFO.address}</p>
+                                    <p> <i className="icon-placeholder"></i>&nbsp;&nbsp;{CONTACT_INFO.address}</p>
                                 </div>
                             </li>
                         </ul>
