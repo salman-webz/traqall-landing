@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import PortalPreview from '@/components/elements/PortalPreview'
 import { useLayoutEffect, useRef } from 'react'
 import HeroTraqAllSlide from '@/components/sections/home1/HeroTraqAllSlide'
 import { TRAQALL_SERVICES } from '@/lib/services'
@@ -20,43 +21,35 @@ const MODULE_ACCENTS = {
 
 const MODULE_HIGHLIGHTS = {
     timecards: [
-        { label: 'Field entry', value: 'Mobile & kiosk' },
-        { label: 'Approvals', value: 'Supervisor workflow' },
-        { label: 'Cost codes', value: 'Per job & phase' },
-        { label: 'Exports', value: 'Payroll ready' },
+        { label: 'Entry', value: 'Individual & bulk' },
+        { label: 'Review', value: 'Submit & approve' },
+        { label: 'Hours', value: 'Regular, OT & DT' },
+        { label: 'Exports', value: 'Choose columns' },
     ],
     equipment: [
-        { label: 'Fleet status', value: 'Live visibility' },
-        { label: 'Utilization', value: 'Per project' },
+        { label: 'Fleet', value: 'Six statuses' },
+        { label: 'Assignment', value: 'Checkout & return' },
+        { label: 'Usage', value: 'Project & operator' },
         { label: 'Maintenance', value: 'Service history' },
-        { label: 'GPS ready', value: 'Asset tracking' },
     ],
     materials: [
-        { label: 'Inventory', value: 'Stock alerts' },
-        { label: 'Purchase orders', value: 'Built-in POs' },
-        { label: 'Deliveries', value: 'Logged to job' },
-        { label: 'Waste', value: 'Usage trends' },
+        { label: 'Inventory', value: 'Catalog & project' },
+        { label: 'Stock', value: 'Alert quantities' },
+        { label: 'Movements', value: 'Six log types' },
+        { label: 'Costs', value: 'Unit cost records' },
     ],
     'small-tools': [
-        { label: 'Registry', value: 'Serial numbers' },
-        { label: 'Check-out', value: 'Crew assignment' },
-        { label: 'Status', value: 'Available / missing' },
-        { label: 'Import', value: 'CSV bulk load' },
+        { label: 'Registry', value: 'Codes & serials' },
+        { label: 'Quantities', value: 'In & out' },
+        { label: 'Due dates', value: 'Overdue filters' },
+        { label: 'Movement', value: 'Return & transfer' },
     ],
     issues: [
-        { label: 'Severity', value: 'Critical flags' },
-        { label: 'Safety', value: 'Incident logs' },
-        { label: 'Assignment', value: 'Owner tracking' },
-        { label: 'Audit trail', value: 'Compliance ready' },
+        { label: 'Priority', value: 'Low to Critical' },
+        { label: 'Ownership', value: 'Assignee & due date' },
+        { label: 'Context', value: 'Related records' },
+        { label: 'Follow-up', value: 'Comments & activity' },
     ],
-}
-
-const MODULE_VISUAL = {
-    timecards: HOME_ASSETS.sliderTimecardMain,
-    equipment: HOME_ASSETS.sliderEquipment,
-    materials: HOME_ASSETS.sliderMaterials,
-    'small-tools': HOME_ASSETS.sliderTools,
-    issues: HOME_ASSETS.sliderIssues,
 }
 
 /** Per-slide construction texture (changes as user scrolls) */
@@ -145,7 +138,6 @@ export default function ModuleFullscreenSlider({
                 {MODULES.map((module, index) => {
                     const slideIndex = index + 1
                     const highlights = MODULE_HIGHLIGHTS[module.slug] || []
-                    const visualSrc = MODULE_VISUAL[module.slug] || module.image
                     const accent = MODULE_ACCENTS[module.slug] || '#DC2626'
 
                     return (
@@ -194,18 +186,7 @@ export default function ModuleFullscreenSlider({
 
                                     <div className="module-fullscreen__panel-visual">
                                         <div className="module-fullscreen__visual-card">
-                                            <div className="module-fullscreen__visual-media">
-                                                <img
-                                                    src={visualSrc}
-                                                    alt={`${module.title} — TraqAll construction management`}
-                                                />
-                                            </div>
-                                            <div className="module-fullscreen__visual-caption">
-                                                <span className="module-fullscreen__visual-caption-icon">
-                                                    <span className={module.icon} />
-                                                </span>
-                                                <p>{module.title} module</p>
-                                            </div>
+                                            <PortalPreview service={module} compact />
                                             <div className="module-fullscreen__highlights">
                                                 {highlights.map((item) => (
                                                     <div

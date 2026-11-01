@@ -28,21 +28,21 @@ export default function About() {
 
                                 <li>
                                     <div className="count-box">
-                                    <h2>  <CounterUp end={100} /></h2>
-                                        <span>%</span>
+                                    <h2>  <CounterUp end={6} /></h2>
+                                        <span></span>
                                     </div>
                                     <div className="text">
-                                        <p>Field Visibility</p>
+                                        <p>Material Movement Types</p>
                                     </div>
                                 </li>
 
                                 <li>
                                     <div className="count-box">
-                                    <h2>  <CounterUp end={24} /></h2>
-                                        <span>/7</span>
+                                    <h2>  <CounterUp end={4} /></h2>
+                                        <span></span>
                                     </div>
                                     <div className="text">
-                                        <p>Platform Access</p>
+                                        <p>Issue Priorities</p>
                                     </div>
                                 </li>
 

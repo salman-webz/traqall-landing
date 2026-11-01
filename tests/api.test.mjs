@@ -52,7 +52,7 @@ test('contact phone validation uses country-specific possible lengths', () => {
 test('direct demo API sends JSON without credentials and preserves API errors', async t => {
  const originalFetch = globalThis.fetch
  const originalLocation = Object.getOwnPropertyDescriptor(globalThis, 'location')
- Object.defineProperty(globalThis, 'location', { configurable: true, value: { origin: 'http://localhost:3001' } })
+ Object.defineProperty(globalThis, 'location', { configurable: true, value: { origin: 'http://localhost:3002' } })
  t.after(() => {
   globalThis.fetch = originalFetch
   if (originalLocation) Object.defineProperty(globalThis, 'location', originalLocation)

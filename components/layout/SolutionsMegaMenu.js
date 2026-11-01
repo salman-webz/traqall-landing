@@ -24,7 +24,7 @@ const CAPABILITY_COLUMNS = [
             { label: "Equipment logs", href: "/equipment" },
             { label: "Maintenance", href: "/equipment" },
             { label: "Materials inventory", href: "/materials" },
-            { label: "Purchase orders", href: "/materials" },
+            { label: "Material movements", href: "/materials" },
         ],
     },
     {
@@ -32,8 +32,8 @@ const CAPABILITY_COLUMNS = [
         links: [
             { label: "Small tools tracking", href: "/small-tools" },
             { label: "Issue reporting", href: "/issues" },
-            { label: "Safety incidents", href: "/issues" },
-            { label: "Reports", href: "/issues" },
+            { label: "Safety hazards", href: "/issues" },
+            { label: "Issue follow-up", href: "/issues" },
         ],
     },
 ]

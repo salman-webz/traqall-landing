@@ -74,7 +74,7 @@ export default function Faq() {
 
                                     <div className="accrodion-content">
                                         <div className="inner">
-                                            <p>Yes. You can manage multiple projects and locations, assigning labor, equipment, and materials to the right job site so every cost is tracked where it belongs.</p>
+                                            <p>Yes. You can manage multiple projects and locations, assigning labor, equipment, and materials to the right job site so records stay connected to the relevant job.</p>
                                         </div>
                                     </div>
                                 </div>

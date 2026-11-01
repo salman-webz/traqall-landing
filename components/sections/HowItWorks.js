@@ -6,7 +6,7 @@ const steps = [
     { title: 'Create a Company', description: 'Set up your company profile and the details your team needs to get started.', image: HOME_ASSETS.working1 },
     { title: 'Create a Project', description: 'Add your project and its location to organize your team’s work.', image: HOME_ASSETS.working3 },
     { title: 'Create Users', description: 'Add supervisors, crew leads, and team members to your company.', image: HOME_ASSETS.working2 },
-    { title: 'Create Timecards', description: 'Record your crew’s working hours and assign timecards to the right project.', image: HOME_ASSETS.working4 },
+    { title: 'Record Daily Work', description: 'Enter timecards, log equipment use and material movements, track tool returns, and follow up on project issues.', image: HOME_ASSETS.working4 },
 ]
 
 export default function HowItWorks() {

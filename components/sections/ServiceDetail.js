@@ -1,4 +1,5 @@
 'use client'
+import PortalPreview from '@/components/elements/PortalPreview'
 import Layout from "@/components/layout/Layout"
 import Link from "next/link"
 import { useState } from 'react'
@@ -19,39 +20,34 @@ export default function ServiceDetail({ service }) {
     }
 
     return (
-        <Layout headerStyle={2} footerStyle={1} breadcrumbTitle={service.title}>
+        <Layout headerStyle={2} footerStyle={1}>
+            <section className="product-hero" style={{ '--hero-image': `url("${service.image}")` }}>
+                <div className="container">
+                    <nav className="product-hero__crumb" aria-label="Breadcrumb"><Link href="/">Home</Link><span>/</span><Link href="/services">Solutions</Link><span>/</span><span aria-current="page">{service.title}</span></nav>
+                    <div className="product-hero__copy">
+                        <div><p className="product-hero__eyebrow">YOUR FIELD. CONNECTED.</p><h1>{service.title}</h1></div>
+                        <p>{service.shortDescription}</p>
+                    </div>
+                </div>
+            </section>
             <section className="services-details">
                 <div className="container">
                     <div className="row">
                         <div className="col-xl-8">
                             <div className="services-details__content">
-                                <div className="services-details__content-img1">
-                                    <img src={service.detailImage} alt={service.title}/>
-                                </div>
-
                                 <div className="services-details__content-text1">
                                     <h2>{service.title}</h2>
                                     <p className="text1">{service.intro}</p>
                                     <p className="text2">{service.introSecondary}</p>
                                 </div>
 
-                                <div className="services-details__content-img2">
-                                    <div className="row">
-                                        <div className="col-xl-6 col-lg-6 col-md-6">
-                                            <div className="services-details__content-img2-single">
-                                                <img src={service.detailImageRow1} alt=""/>
-                                            </div>
-                                        </div>
-                                        <div className="col-xl-6 col-lg-6 col-md-6">
-                                            <div className="services-details__content-img2-single">
-                                                <img src={service.detailImageRow2} alt=""/>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
                                 <div className="services-details__content-text2">
                                     <p className="text1">{service.qualityText}</p>
+                                    {service.portalScreenshot && (
+                                        <div className="module-desktop-preview">
+                                            <PortalPreview service={service} />
+                                        </div>
+                                    )}
                                     <h2>{service.capabilitiesHeading}</h2>
                                     <p className="text2">{service.capabilitiesIntro}</p>
                                 </div>
@@ -60,7 +56,7 @@ export default function ServiceDetail({ service }) {
                                     <div className="row">
                                         <div className="col-xl-6 col-lg-6 col-md-6">
                                             <div className="services-details__content-text3-img">
-                                                <img src={service.detailImageFeature} alt=""/>
+                                                <div className="product-mobile-preview"><img src={service.screenshot} alt={`TraqAll ${service.title} mobile screen`} loading="lazy" /><span>Stay connected in the field</span></div>
                                             </div>
                                         </div>
                                         <div className="col-xl-6 col-lg-6 col-md-6">
@@ -76,6 +72,26 @@ export default function ServiceDetail({ service }) {
                                         </div>
                                     </div>
                                 </div>
+
+                                <section className="services-details__content-text2 module-workflow" aria-label={`${service.title} workflow`}>
+                                    <h2>How {service.title} Works</h2>
+                                    <ol className="module-workflow__steps">
+                                        {service.workflow.map((step) => (
+                                            <li key={step.title}>
+                                                <h3>{step.title}</h3>
+                                                <p>{step.description}</p>
+                                            </li>
+                                        ))}
+                                    </ol>
+                                </section>
+
+                                <section className="module-record-preview" aria-label={`${service.title} record details`}>
+                                    <div>
+                                        <h2>Inside the Record</h2>
+                                        <p>{service.detailSummary}</p>
+                                        <Link className="thm-btn" href={`/contact?module=${service.slug}`}>See {service.title} in a demo</Link>
+                                    </div>
+                                </section>
 
                                 <div className="services-details__accrodion">
                                     <div className="faq-one__faq">

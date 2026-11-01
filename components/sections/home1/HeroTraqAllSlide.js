@@ -7,8 +7,8 @@ import { HOME_ASSETS } from '@/lib/home-assets'
 const HERO_FEATURES = [
     {
         icon: 'icon-clock',
-        title: 'Real-time Visibility',
-        text: 'Track everything in real time.',
+        title: 'Project Visibility',
+        text: 'Review records across your projects.',
     },
     {
         icon: 'icon-construction-2',
@@ -50,8 +50,8 @@ export default function HeroTraqAllSlide({ onOpenVideo }) {
                             <p className="traqall-hero__description">
                                 TraqAll brings timecards, equipment, materials, small
                                 tools, and issues together in one platform—giving
-                                construction teams complete visibility and control in
-                                real time.
+                                construction teams one place to review hours, stock,
+                                assignments, and follow-up.
                             </p>
 
                             <ul className="traqall-hero__features">

@@ -13,10 +13,10 @@ const MODULE_ACCENTS = {
 }
 
 const MODULE_BLURBS = {
-    timecards: 'Track crew hours and labor in real time.',
+    timecards: 'Record hours and review timecards.',
     equipment: 'Monitor equipment usage and status.',
-    materials: 'Manage materials inventory on site.',
-    'small-tools': 'Track small tools and check-out status.',
+    materials: 'Track stock and material movements.',
+    'small-tools': 'Track tool quantities and returns.',
     issues: 'Log, assign, and resolve issues faster.',
 }
 
