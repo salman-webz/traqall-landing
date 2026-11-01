@@ -1,5 +1,6 @@
 'use client'
 
+import { CONTACT_INFO, emailHref, phoneHref } from '@/lib/contact-info.mjs'
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { useEffect, useRef, useState } from "react"
@@ -175,11 +176,11 @@ const MobileMenu = ({ isOpen, onClose }) => {
                 <ul className="traqall-mobile-nav__contact">
                     <li>
                         <i className="fa fa-envelope" aria-hidden="true" />
-                        <Link href="mailto:support@traqall.com">support@traqall.com</Link>
+                        <Link href={emailHref()}>{CONTACT_INFO.email}</Link>
                     </li>
                     <li>
                         <i className="fa fa-phone-alt" aria-hidden="true" />
-                        <Link href="tel:666-888-0000">666 888 0000</Link>
+                        <Link href={phoneHref()}>{CONTACT_INFO.phones[0]}</Link>
                     </li>
                 </ul>
             </aside>

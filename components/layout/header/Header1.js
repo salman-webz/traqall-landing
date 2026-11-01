@@ -1,3 +1,4 @@
+import { CONTACT_INFO, emailHref } from '@/lib/contact-info.mjs'
 import Link from "next/link"
 import Menu from "../Menu"
 
@@ -20,16 +21,13 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu, handle
                                     <i className="icon-clock"></i>
                                 </div>
                                 <div className="text">
-                                    <p>6:00 am - 4:20 pm - Sat - Sun</p>
+                                    <p>{CONTACT_INFO.hours}</p>
                                 </div>
                             </li>
 
                             <li>
-                                <div className="icon">
-                                    <i className="icon-phone-call"></i>
-                                </div>
                                 <div className="text">
-                                    <p><Link href="mailto:support@traqall.com">support@traqall.com</Link></p>
+                                    <p><i className="fa fa-envelope"></i><Link href={emailHref()}>{CONTACT_INFO.email}</Link></p>
                                 </div>
                             </li>
 
@@ -38,7 +36,7 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu, handle
                                     <i className="icon-placeholder"></i>
                                 </div>
                                 <div className="text">
-                                    <p>Syracuse, Connecticut- 17A</p>
+                                    <p>{CONTACT_INFO.address}</p>
                                 </div>
                             </li>
                         </ul>

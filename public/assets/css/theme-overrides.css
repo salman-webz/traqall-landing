@@ -2549,3 +2549,26 @@ html:has(.home-landing) {
 @media (prefers-reduced-motion: reduce) { .portal-preview__window { transition: none; } }
 
 .module-desktop-preview { margin: 28px 0 36px; }
+
+/* Top bar interactions use the website's yellow accent. */
+.main-header-one__top a,
+.main-header-one__top a i,
+.main-header-one__top .main-header__language-switcher select {
+  transition: color .18s ease;
+}
+.main-header-one__top a:hover,
+.main-header-one__top a:focus-visible,
+.main-header-one__top a:hover i,
+.main-header-one__top a:focus-visible i,
+.main-header-one__top .header-style1__contact li:hover .icon i,
+.main-header-one__top .header-style1__contact li:focus-within .icon i,
+.main-header-one__top .main-header__language-switcher:hover .icon,
+.main-header-one__top .main-header__language-switcher:hover select,
+.main-header-one__top .main-header__language-switcher:focus-within .icon,
+.main-header-one__top .main-header__language-switcher select:focus-visible {
+  color: #e5cc00;
+}
+.main-header-one .main-header-one__top .header-style1__contact li .text p a:hover,
+.main-header-one .main-header-one__top .header-style1__contact li .text p a:focus-visible {
+  color: #e5cc00;
+}

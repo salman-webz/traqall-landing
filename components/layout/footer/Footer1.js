@@ -1,3 +1,4 @@
+import { CONTACT_INFO, emailHref } from '@/lib/contact-info.mjs'
 import Link from "next/link"
 
 export default function Footer1() {
@@ -91,7 +92,7 @@ export default function Footer1() {
                                         </div>
 
                                         <div className="text-box">
-                                            <p>Syracuse, Connecticut-17A<br/> Field Operations Support</p>
+                                            <p>{CONTACT_INFO.address}<br/> {CONTACT_INFO.addressNote}</p>
                                         </div>
                                     </li>
 
@@ -112,7 +113,7 @@ export default function Footer1() {
                                         </div>
 
                                         <div className="text-box">
-                                            <p><Link href="mailto:support@traqall.com">support@traqall.com</Link></p>
+                                            <p><Link href={emailHref()}>{CONTACT_INFO.email}</Link></p>
                                         </div>
                                     </li>
                                 </ul>

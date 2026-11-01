@@ -1,4 +1,5 @@
 'use client'
+import { CONTACT_INFO, emailHref } from '@/lib/contact-info.mjs'
 import Link from "next/link"
 import { useMemo, useState } from "react"
 import { FAQ_CATEGORIES } from "@/lib/faq-content"
@@ -206,8 +207,8 @@ export default function FaqHub() {
                                         <span className="hover-btn hover-bx3" />
                                         <span className="hover-btn hover-bx4" />
                                     </Link>
-                                    <Link className="faq-hub__cta-link" href="mailto:support@traqall.com">
-                                        support@traqall.com
+                                    <Link className="faq-hub__cta-link" href={emailHref()}>
+                                        {CONTACT_INFO.email}
                                     </Link>
                                 </div>
                             </div>

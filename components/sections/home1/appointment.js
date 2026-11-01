@@ -1,4 +1,5 @@
 'use client'
+import { CONTACT_INFO, emailHref, phoneHref } from '@/lib/contact-info.mjs'
 import Link from "next/link"
 import { useId, useState } from "react"
 import flags from "react-phone-number-input/flags"
@@ -51,8 +52,8 @@ export default function Appoinment({ contactPage = false }) {
                                             </div>
                                             <div className="content-box">
                                                 <h2>Get in touch</h2>
-                                                <p>support@traqall.com</p>
-                                                <p>traqall.com</p>
+                                                <p>{CONTACT_INFO.email}</p>
+                                                <p>{CONTACT_INFO.website}</p>
                                             </div>
                                         </div>
                                     </li>
@@ -64,8 +65,8 @@ export default function Appoinment({ contactPage = false }) {
                                             </div>
                                             <div className="content-box">
                                                 <h2>Email us</h2>
-                                                <p><Link href="mailto:support@traqall.com">support@traqall.com</Link></p>
-                                                <p><Link href="mailto:support@traqall.com">Request a demo anytime</Link></p>
+                                                <p><Link href={emailHref()}>{CONTACT_INFO.email}</Link></p>
+                                                <p><Link href={emailHref()}>Request a demo anytime</Link></p>
                                             </div>
                                         </div>
                                     </li>
@@ -77,8 +78,9 @@ export default function Appoinment({ contactPage = false }) {
                                             </div>
                                             <div className="content-box">
                                                 <h2>Call us</h2>
-                                                <p><Link href="tel:123456789">01158547862</Link></p>
-                                                <p><Link href="tel:123455874">01158585471</Link></p>
+                                                {CONTACT_INFO.phones.map((phone) => (
+                                                    <p key={phone}><Link href={phoneHref(phone)}>{phone}</Link></p>
+                                                ))}
                                             </div>
                                         </div>
                                     </li>
@@ -108,6 +110,7 @@ export default function Appoinment({ contactPage = false }) {
                                 <div className="form-group">
                                     <PhoneInput
                                         flags={flags}
+                                        defaultCountry={CONTACT_INFO.defaultCountry}
                                         name="phone"
                                         aria-label="Phone Number"
                                         placeholder="Enter phone number"

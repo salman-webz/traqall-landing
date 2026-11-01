@@ -1,4 +1,5 @@
 'use client'
+import { CONTACT_INFO, emailHref, phoneHref } from '@/lib/contact-info.mjs'
 import Link from "next/link"
 import Layout from "@/components/layout/Layout"
 export default function Home() {
@@ -49,7 +50,7 @@ export default function Home() {
 
                                                     <div className="text-box">
                                                         <p>Email Address</p>
-                                                        <h2><Link href="mailto:yourmail@email.com">Info@gmail.com</Link>
+                                                        <h2><Link href={emailHref()}>{CONTACT_INFO.email}</Link>
                                                         </h2>
                                                     </div>
                                                 </div>
@@ -74,7 +75,7 @@ export default function Home() {
 
                                                     <div className="text-box">
                                                         <p>Phone Number</p>
-                                                        <h2><Link href="tel:1234567890">+ (704) 555-0127</Link>
+                                                        <h2><Link href={phoneHref()}>{CONTACT_INFO.phones[0]}</Link>
                                                         </h2>
                                                     </div>
                                                 </div>
@@ -171,8 +172,7 @@ export default function Home() {
                                         <p>Systems analyst</p>
                                     </div>
                                     <div className="number">
-                                        <p><span className="icon-phone-call"></span> <Link href="tel:1234567890">(704)
-                                                555-0127</Link>
+                                        <p><span className="icon-phone-call"></span> <Link href={phoneHref()}>{CONTACT_INFO.phones[0]}</Link>
                                         </p>
                                     </div>
                                 </div>
@@ -209,8 +209,7 @@ export default function Home() {
                                         <p>Team Leader</p>
                                     </div>
                                     <div className="number">
-                                        <p><span className="icon-phone-call"></span> <Link href="tel:1234567890">(704)
-                                                555-0127</Link>
+                                        <p><span className="icon-phone-call"></span> <Link href={phoneHref()}>{CONTACT_INFO.phones[0]}</Link>
                                         </p>
                                     </div>
                                 </div>
@@ -247,8 +246,7 @@ export default function Home() {
                                         <p>General Manager</p>
                                     </div>
                                     <div className="number">
-                                        <p><span className="icon-phone-call"></span> <Link href="tel:1234567890">(704)
-                                                555-0127</Link>
+                                        <p><span className="icon-phone-call"></span> <Link href={phoneHref()}>{CONTACT_INFO.phones[0]}</Link>
                                         </p>
                                     </div>
                                 </div>
@@ -285,8 +283,7 @@ export default function Home() {
                                         <p>Project Manager</p>
                                     </div>
                                     <div className="number">
-                                        <p><span className="icon-phone-call"></span> <Link href="tel:1234567890">(704)
-                                                555-0127</Link>
+                                        <p><span className="icon-phone-call"></span> <Link href={phoneHref()}>{CONTACT_INFO.phones[0]}</Link>
                                         </p>
                                     </div>
                                 </div>

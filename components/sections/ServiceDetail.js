@@ -1,4 +1,5 @@
 'use client'
+import { CONTACT_INFO, emailHref } from '@/lib/contact-info.mjs'
 import PortalPreview from '@/components/elements/PortalPreview'
 import Layout from "@/components/layout/Layout"
 import Link from "next/link"
@@ -146,7 +147,7 @@ export default function ServiceDetail({ service }) {
                                         </div>
                                         <div className="number-box">
                                             <p>Talk to our team</p>
-                                            <h3><Link href="mailto:support@traqall.com">support@traqall.com</Link></h3>
+                                            <h3><Link href={emailHref()}>{CONTACT_INFO.email}</Link></h3>
                                         </div>
                                         <div className="text-box">
                                             <p>See how TraqAll can bring timecards, equipment, materials, and more into one command center for your field operations.</p>

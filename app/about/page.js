@@ -1,4 +1,5 @@
 'use client'
+import { CONTACT_INFO, emailHref } from '@/lib/contact-info.mjs'
 import Layout from "@/components/layout/Layout"
 import About from "@/components/sections/home1/About"
 import Link from "next/link"
@@ -276,7 +277,7 @@ export default function AboutPage() {
                                         <p>Product Lead</p>
                                     </div>
                                     <div className="number">
-                                        <p><span className="icon-email"></span> <Link href="mailto:product@traqall.com">product@traqall.com</Link>
+                                        <p><span className="icon-email"></span> <Link href={emailHref(CONTACT_INFO.departments.product)}>{CONTACT_INFO.departments.product}</Link>
                                         </p>
                                     </div>
                                 </div>
@@ -313,7 +314,7 @@ export default function AboutPage() {
                                         <p>Field Operations</p>
                                     </div>
                                     <div className="number">
-                                        <p><span className="icon-email"></span> <Link href="mailto:fieldops@traqall.com">fieldops@traqall.com</Link>
+                                        <p><span className="icon-email"></span> <Link href={emailHref(CONTACT_INFO.departments.fieldops)}>{CONTACT_INFO.departments.fieldops}</Link>
                                         </p>
                                     </div>
                                 </div>
@@ -350,7 +351,7 @@ export default function AboutPage() {
                                         <p>Customer Success</p>
                                     </div>
                                     <div className="number">
-                                        <p><span className="icon-email"></span> <Link href="mailto:success@traqall.com">success@traqall.com</Link>
+                                        <p><span className="icon-email"></span> <Link href={emailHref(CONTACT_INFO.departments.success)}>{CONTACT_INFO.departments.success}</Link>
                                         </p>
                                     </div>
                                 </div>
@@ -387,7 +388,7 @@ export default function AboutPage() {
                                         <p>Engineering Lead</p>
                                     </div>
                                     <div className="number">
-                                        <p><span className="icon-email"></span> <Link href="mailto:engineering@traqall.com">engineering@traqall.com</Link>
+                                        <p><span className="icon-email"></span> <Link href={emailHref(CONTACT_INFO.departments.engineering)}>{CONTACT_INFO.departments.engineering}</Link>
                                         </p>
                                     </div>
                                 </div>

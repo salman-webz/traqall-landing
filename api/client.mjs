@@ -1,3 +1,5 @@
+import { CONTACT_INFO } from '../lib/contact-info.mjs'
+
 export class ApiError extends Error {
     constructor(message, { status = 0, code = 'HTTP_ERROR', fields = {} } = {}) {
         super(message)
@@ -9,7 +11,7 @@ export class ApiError extends Error {
 }
 
 export async function request(endpoint, { data, signal, timeout = 15000, baseURL = process.env.NEXT_PUBLIC_API_BASE_URL } = {}) {
-    if (!baseURL) throw new ApiError('Submissions are not configured yet. Please contact support@traqall.com.', { code: 'CONFIGURATION' })
+    if (!baseURL) throw new ApiError(`Submissions are not configured yet. Please contact ${CONTACT_INFO.email}.`, { code: 'CONFIGURATION' })
     let url
     try {
         url = new URL(`${baseURL.replace(/\/+$/, '')}/${endpoint.replace(/^\/+/, '')}`, globalThis.location?.origin)
