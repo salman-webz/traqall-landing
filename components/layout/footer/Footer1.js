@@ -55,7 +55,7 @@ export default function Footer1() {
                                     <li><Link href="/timecards"><span className="icon-chevron"></span> Timecards</Link></li>
                                     <li><Link href="/equipment"><span className="icon-chevron"></span> Equipment</Link></li>
                                     <li><Link href="/materials"><span className="icon-chevron"></span> Materials</Link></li>
-                                    <li><Link href="/small-tools"><span className="icon-chevron"></span> Small Tools</Link></li>
+                                    <li><Link href="/small-tools"><span className="icon-chevron"></span> Tools</Link></li>
                                     <li><Link href="/issues"><span className="icon-chevron"></span> Issues</Link></li>
                                 </ul>
                             </div>

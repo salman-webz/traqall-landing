@@ -81,7 +81,7 @@ export default function AboutPage() {
                             </div>
 
                             <div className="about-two__middle-text">
-                                <p>TraqAll is a field-operations platform built for construction teams. We help supervisors, project managers, and crews track timecards, equipment, materials, small tools, and site issues from one command center.</p>
+                                <p>TraqAll is a field-operations platform built for construction teams. We help supervisors, project managers, and crews track timecards, equipment, materials, tools, and site issues from one command center.</p>
                             </div>
 
                             <div className="about-two__middle-text2">

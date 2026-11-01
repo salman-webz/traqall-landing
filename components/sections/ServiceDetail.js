@@ -73,6 +73,22 @@ export default function ServiceDetail({ service }) {
                                     </div>
                                 </div>
 
+                                {service.kiosk && (
+                                    <section className="module-kiosk" aria-labelledby="kiosk-title">
+                                        <p className="product-hero__eyebrow">BUILT FOR SHARED FIELD DEVICES</p>
+                                        <h2 id="kiosk-title">{service.kiosk.title}</h2>
+                                        <p>{service.kiosk.intro}</p>
+                                        <ol className="module-workflow__steps">
+                                            {service.kiosk.steps.map((step) => (
+                                                <li key={step.title}>
+                                                    <h3>{step.title}</h3>
+                                                    <p>{step.description}</p>
+                                                </li>
+                                            ))}
+                                        </ol>
+                                    </section>
+                                )}
+
                                 <section className="services-details__content-text2 module-workflow" aria-label={`${service.title} workflow`}>
                                     <h2>How {service.title} Works</h2>
                                     <ol className="module-workflow__steps">

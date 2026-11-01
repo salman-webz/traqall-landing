@@ -2,7 +2,7 @@ import { CONTACT_INFO, emailHref } from '@/lib/contact-info.mjs'
 import Link from "next/link"
 import Menu from "../Menu"
 
-export default function Header1({ scroll, isMobileMenu, handleMobileMenu, handlePopup }) {
+export default function Header1({ scroll, isMobileMenu, handleMobileMenu }) {
     return (
         <>
 
@@ -95,9 +95,6 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu, handle
                                 </div>
 
                                 <div className="main-header-one__bottom-right">
-                                    <div className="header-search-box">
-                                        <Link href="#" onClick={handlePopup} className="main-menu__search search-toggler icon-search-interface-symbol"></Link>
-                                    </div>
 
                                     <div className="main-header__btn">
                                         <Link className="thm-btn" href="/contact">Get a Demo
@@ -147,9 +144,6 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu, handle
                                 </div>
 
                                 <div className="main-header-one__bottom-right">
-                                    <div className="header-search-box">
-                                        <Link href="#" className="main-menu__search search-toggler icon-search-interface-symbol" onClick={handlePopup}></Link>
-                                    </div>
 
                                     <div className="main-header__btn">
                                         <Link className="thm-btn" href="/contact">Get a Demo

@@ -30,7 +30,7 @@ const CAPABILITY_COLUMNS = [
     {
         title: "Site Management",
         links: [
-            { label: "Small tools tracking", href: "/small-tools" },
+            { label: "Tools tracking", href: "/small-tools" },
             { label: "Issue reporting", href: "/issues" },
             { label: "Safety hazards", href: "/issues" },
             { label: "Issue follow-up", href: "/issues" },

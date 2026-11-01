@@ -9,7 +9,7 @@ import 'swiper/css/free-mode';
 import { publicSans, exo } from '@/lib/font'
 export const metadata = {
     title: 'TraqAll | We Manage Your Mess',
-    description: 'TraqAll is a construction field-operations platform for timecards, equipment, materials, small tools, and issues.',
+    description: 'TraqAll is a construction field-operations platform for timecards, equipment, materials, tools, and issues.',
     icons: {
         icon: [{ url: '/assets/images/favicons/traqall-portal.png', type: 'image/png' }],
         apple: '/assets/images/favicons/traqall-portal.png',

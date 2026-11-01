@@ -104,7 +104,7 @@ export default function Pricing() {
                                                                 </div>
 
                                                                 <div className="text-box">
-                                                                    <p>Small tools tracking</p>
+                                                                    <p>Tools tracking</p>
                                                                 </div>
                                                             </li>
 
@@ -181,7 +181,7 @@ export default function Pricing() {
                                                                 </div>
 
                                                                 <div className="text-box">
-                                                                    <p>Small tools tracking</p>
+                                                                    <p>Tools tracking</p>
                                                                 </div>
                                                             </li>
 
@@ -262,7 +262,7 @@ export default function Pricing() {
                                                                 </div>
 
                                                                 <div className="text-box">
-                                                                    <p>Small tools tracking</p>
+                                                                    <p>Tools tracking</p>
                                                                 </div>
                                                             </li>
 
@@ -354,7 +354,7 @@ export default function Pricing() {
                                                                 </div>
 
                                                                 <div className="text-box">
-                                                                    <p>Small tools tracking</p>
+                                                                    <p>Tools tracking</p>
                                                                 </div>
                                                             </li>
 
@@ -431,7 +431,7 @@ export default function Pricing() {
                                                                 </div>
 
                                                                 <div className="text-box">
-                                                                    <p>Small tools tracking</p>
+                                                                    <p>Tools tracking</p>
                                                                 </div>
                                                             </li>
 
@@ -512,7 +512,7 @@ export default function Pricing() {
                                                                 </div>
 
                                                                 <div className="text-box">
-                                                                    <p>Small tools tracking</p>
+                                                                    <p>Tools tracking</p>
                                                                 </div>
                                                             </li>
 

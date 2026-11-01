@@ -4,7 +4,6 @@ import { useCallback, useEffect, useState } from "react"
 import BackToTop from '../elements/BackToTop'
 import DataBg from "../elements/DataBg"
 import Breadcrumb from './Breadcrumb'
-import SearchPopup from "./SearchPopup"
 import Sidebar from "./Sidebar"
 import MobileMenu from "./MobileMenu"
 import Header1 from "./header/Header1"
@@ -27,9 +26,6 @@ export default function Layout({ headerStyle, footerStyle, headTitle, breadcrumb
         return () => document.body.classList.remove("mobile-menu-visible")
     }, [isMobileMenu])
 
-    // Popup
-    const [isPopup, setPopup] = useState(false)
-    const handlePopup = () => setPopup(!isPopup)
 
     // Sidebar
     const [isSidebar, setSidebar] = useState(false)
@@ -59,14 +55,13 @@ export default function Layout({ headerStyle, footerStyle, headTitle, breadcrumb
                 id="top"
                 aria-hidden={isMobileMenu ? true : undefined}
             >
-                {hasHeader && <Header1 scroll={scroll} isMobileMenu={isMobileMenu} handleMobileMenu={toggleMobileMenu} handlePopup={handlePopup} isSidebar={isSidebar} handleSidebar={handleSidebar} />}
+                {hasHeader && <Header1 scroll={scroll} isMobileMenu={isMobileMenu} handleMobileMenu={toggleMobileMenu} isSidebar={isSidebar} handleSidebar={handleSidebar} />}
 
                 {hasHeader ? (
                     <MobileMenu isOpen={isMobileMenu} onClose={closeMobileMenu} />
                 ) : null}
 
                 <Sidebar isSidebar={isSidebar} handleSidebar={handleSidebar} />
-                <SearchPopup isPopup={isPopup} handlePopup={handlePopup} />
 
                 {breadcrumbTitle && <Breadcrumb breadcrumbTitle={breadcrumbTitle} />}
 

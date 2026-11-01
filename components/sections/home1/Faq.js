@@ -50,7 +50,7 @@ export default function Faq() {
 
                                     <div className="accrodion-content">
                                         <div className="inner">
-                                            <p>TraqAll includes five core modules: Timecards, Equipment, Materials, Small Tools, and Issues — plus Directory, Company, and Project settings to manage your team and jobs.</p>
+                                            <p>TraqAll includes five core modules: Timecards, Equipment, Materials, Tools, and Issues — plus Directory, Company, and Project settings to manage your team and jobs.</p>
                                         </div>
                                     </div>
                                 </div>
