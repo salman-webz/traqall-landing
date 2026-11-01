@@ -59,7 +59,7 @@ export default function Layout({ headerStyle, footerStyle, headTitle, breadcrumb
                 id="top"
                 aria-hidden={isMobileMenu ? true : undefined}
             >
-                {/* {hasHeader && <Header1 scroll={scroll} isMobileMenu={isMobileMenu} handleMobileMenu={toggleMobileMenu} handlePopup={handlePopup} isSidebar={isSidebar} handleSidebar={handleSidebar} />} */}
+                {hasHeader && <Header1 scroll={scroll} isMobileMenu={isMobileMenu} handleMobileMenu={toggleMobileMenu} handlePopup={handlePopup} isSidebar={isSidebar} handleSidebar={handleSidebar} />}
 
                 {hasHeader ? (
                     <MobileMenu isOpen={isMobileMenu} onClose={closeMobileMenu} />

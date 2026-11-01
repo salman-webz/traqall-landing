@@ -12,7 +12,7 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu, handle
         {/* Start Main Header One*/} 
         <header className="main-header-one">
             {/* Start Main Header One Top*/} 
-            <div className="main-header-one__top">
+            <div className="main-header-one__top hide">
                 <div className="container">
                     <div className="main-header-one__top-inner">
                         <ul className="header-style1__contact">
