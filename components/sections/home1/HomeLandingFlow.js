@@ -4,9 +4,10 @@ import { useCallback, useEffect, useRef, useState } from 'react'
 import ModalVideo from 'react-modal-video'
 import ModuleFullscreenSlider from '@/components/sections/home1/ModuleFullscreenSlider'
 import About from '@/components/sections/home1/About'
+import { TRAQALL_SERVICES } from '@/lib/services'
 import { createLandingNavigation } from '@/lib/landing-navigation.mjs'
 
-const LAST_SLIDE_INDEX = 5
+const LAST_SLIDE_INDEX = TRAQALL_SERVICES.length
 const MOBILE_MAX_WIDTH = 1199
 const DEFAULT_HEADER_OFFSET = 100
 

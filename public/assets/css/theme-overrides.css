@@ -2605,3 +2605,35 @@ html:has(.home-landing) {
 .module-kiosk .module-workflow__steps { margin-bottom: 0; }
 .module-kiosk .module-workflow__steps li:last-child { margin-bottom: 0; }
 @media (max-width: 575px) { .module-kiosk { padding: 20px; } }
+
+.traqall-pricing { padding: 60px 0 90px; background: #f8fafb; }
+.traqall-pricing__intro { margin: 18px auto 0; color: #637084; max-width: 560px; }
+.traqall-pricing__options { display: flex; justify-content: center; gap: 8px; margin: 28px 0 36px; }
+.traqall-pricing__options button { padding: 12px 20px; border: 1px solid #dfe4e9; border-radius: 8px; background: white; color: #344054; font-weight: 600; }
+.traqall-pricing__options button[aria-pressed="true"] { background: #e5cc00; border-color: #e5cc00; color: #181b20; }
+.traqall-pricing__options button:focus-visible { outline: 3px solid #344054; outline-offset: 3px; }
+.traqall-pricing__grid { margin-top: 36px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+.traqall-pricing__card { display: flex; flex-direction: column; padding: 32px; border: 1px solid #e3e8ed; border-radius: 16px; background: white; box-shadow: 0 12px 30px #172b4d08; }
+.traqall-pricing__card h3 { font-size: 26px; margin-bottom: 22px; }
+.traqall-pricing__price { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; margin: 0; }
+.traqall-pricing__price strong { font-size: clamp(34px, 3vw, 46px); line-height: 1.2; color: #171d26; }
+.traqall-pricing__price span, .traqall-pricing__alternative { color: #637084; font-size: 14px; }
+.traqall-pricing__alternative { margin: 12px 0 24px; }
+.traqall-pricing__card ul { list-style: none; padding: 24px 0 0; border-top: 1px solid #eef0f3; margin: 0 0 32px; flex: 1; }
+.traqall-pricing__card li { display: flex; gap: 12px; margin-bottom: 14px; color: #4d5b70; line-height: 1.55; }
+.traqall-pricing__card li span { color: #26865c; margin-top: 4px; }
+.traqall-pricing__card .thm-btn { text-align: center; }
+@media (max-width: 991px) { .traqall-pricing__grid { grid-template-columns: 1fr; } }
+@media (max-width: 575px) { .traqall-pricing__card { padding: 24px; } .traqall-pricing__options button { padding: 10px 12px; font-size: 13px; } }
+
+.module-budget-illustration {
+    margin: 32px 0;
+    overflow: hidden;
+    border-radius: 16px;
+    border: 1px solid #e5e9ef;
+}
+.module-budget-illustration img {
+    display: block;
+    width: 100%;
+    height: auto;
+}

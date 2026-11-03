@@ -1,21 +1,23 @@
 'use client'
 
 import Link from 'next/link'
-import PortalPreview from '@/components/elements/PortalPreview'
 import { useLayoutEffect, useRef } from 'react'
 import HeroTraqAllSlide from '@/components/sections/home1/HeroTraqAllSlide'
-import { TRAQALL_SERVICES } from '@/lib/services'
+import { TRAQALL_SERVICES, MODULE_SLIDER_IMAGES } from '@/lib/services'
 import { HOME_ASSETS } from '@/lib/home-assets'
 
-const SLIDE_COUNT = 6
-const MODULES = TRAQALL_SERVICES.slice(0, 5)
+const MODULES = TRAQALL_SERVICES
+const SLIDE_COUNT = MODULES.length + 1
 const SLIDE_LABELS = ['Overview', ...MODULES.map((m) => m.title)]
+
+
 
 const MODULE_ACCENTS = {
     timecards: '#22c55e',
     equipment: '#3b82f6',
     materials: '#8b5cf6',
     'small-tools': '#DC2626',
+    budget: '#10b981',
     issues: '#ef4444',
 }
 
@@ -44,6 +46,12 @@ const MODULE_HIGHLIGHTS = {
         { label: 'Due dates', value: 'Overdue filters' },
         { label: 'Movement', value: 'Return & transfer' },
     ],
+    budget: [
+        { label: "Planning", value: "By cost code" },
+        { label: "Categories", value: "Labor, equipment & materials" },
+        { label: "Performance", value: "Budget vs. actual" },
+        { label: "Visibility", value: "Remaining & percentage used" },
+    ],
     issues: [
         { label: 'Priority', value: 'Low to Critical' },
         { label: 'Ownership', value: 'Assignee & due date' },
@@ -59,6 +67,7 @@ const SLIDE_TEXTURES = [
     HOME_ASSETS.landingTextureBgAlt,
     HOME_ASSETS.serviceImg3,
     HOME_ASSETS.serviceImg4,
+    HOME_ASSETS.landingTextureBgAlt,
     HOME_ASSETS.serviceImg5,
 ]
 
@@ -186,7 +195,13 @@ export default function ModuleFullscreenSlider({
 
                                     <div className="module-fullscreen__panel-visual">
                                         <div className="module-fullscreen__visual-card">
-                                            <PortalPreview service={module} compact />
+                                            <div className="module-fullscreen__visual-media">
+                                                <img src={MODULE_SLIDER_IMAGES[module.slug]} alt={`${module.title} product illustration`} />
+                                            </div>
+                                            <div className="module-fullscreen__visual-caption">
+                                                <span className="module-fullscreen__visual-caption-icon"><span className={module.icon} /></span>
+                                                <p>{module.title} overview</p>
+                                            </div>
                                             <div className="module-fullscreen__highlights">
                                                 {highlights.map((item) => (
                                                     <div

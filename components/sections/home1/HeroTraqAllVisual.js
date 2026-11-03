@@ -20,7 +20,7 @@ const MODULE_BLURBS = {
     issues: 'Log, assign, and resolve issues faster.',
 }
 
-const HERO_MODULES = TRAQALL_SERVICES.slice(0, 5).map((module) => ({
+const HERO_MODULES = TRAQALL_SERVICES.filter((module) => module.slug !== "budget").map((module) => ({
     slug: module.slug,
     title: module.title,
     icon: module.icon,

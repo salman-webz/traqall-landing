@@ -2,12 +2,12 @@ import test from 'node:test'
 import assert from 'node:assert/strict'
 import { createLandingNavigation } from '../lib/landing-navigation.mjs'
 
-function setup(index = 0) {
+function setup(index = 0, lastIndex = 5) {
     const state = { index, scroll: 0, time: 0, changes: [] }
     const navigation = createLandingNavigation({
         getIndex: () => state.index,
         setIndex: (index) => { state.index = index; state.changes.push(index) },
-        lastIndex: 5,
+        lastIndex,
         getScrollTop: () => state.scroll,
         now: () => state.time,
         scrollBy: (delta) => { state.scroll = Math.max(0, state.scroll + delta) },
@@ -190,4 +190,13 @@ test('decaying large trackpad momentum does not skip slides', () => {
         wheel(120 - i * 5)
     }
     assert.deepEqual(state.changes, [1])
+})
+
+test('seven-slide flow reaches Issues after Budget and releases scrolling', () => {
+    const { state, wheel } = setup(5, 6)
+    assert.equal(wheel(50), true)
+    assert.equal(state.index, 6)
+    state.time = 3000
+    assert.equal(wheel(100), false)
+    assert.equal(state.index, 6)
 })

@@ -1,7 +1,7 @@
 'use client'
 import Link from "next/link"
 import Layout from "@/components/layout/Layout"
-import { TRAQALL_SERVICES } from "@/lib/services"
+import { TRAQALL_SERVICES, MODULE_SLIDER_IMAGES } from "@/lib/services"
 
 export default function ServicesPage() {
     return (
@@ -22,7 +22,7 @@ export default function ServicesPage() {
                                         <p>{service.shortDescription}</p>
                                     </div>
                                     <div className="services-one__single-img">
-                                        <img src={service.image} alt={service.title}/>
+                                        <img src={MODULE_SLIDER_IMAGES[service.slug]} alt={`${service.title} product illustration`} loading="lazy"/>
                                     </div>
                                 </div>
                             </div>

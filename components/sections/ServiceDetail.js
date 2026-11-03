@@ -48,18 +48,23 @@ export default function ServiceDetail({ service }) {
                                             <PortalPreview service={service} />
                                         </div>
                                     )}
+                                    {!service.portalScreenshot && service.illustration && (
+                                        <figure className="module-budget-illustration">
+                                            <img src={service.illustration} alt="Construction project manager reviewing budget plans and cost charts" width="1536" height="1024" loading="lazy" />
+                                        </figure>
+                                    )}
                                     <h2>{service.capabilitiesHeading}</h2>
                                     <p className="text2">{service.capabilitiesIntro}</p>
                                 </div>
 
                                 <div className="services-details__content-text3">
                                     <div className="row">
-                                        <div className="col-xl-6 col-lg-6 col-md-6">
+                                        {service.screenshot && <div className="col-xl-6 col-lg-6 col-md-6">
                                             <div className="services-details__content-text3-img">
                                                 <div className="product-mobile-preview"><img src={service.screenshot} alt={`TraqAll ${service.title} mobile screen`} loading="lazy" /><span>Stay connected in the field</span></div>
                                             </div>
-                                        </div>
-                                        <div className="col-xl-6 col-lg-6 col-md-6">
+                                        </div>}
+                                        <div className={service.screenshot ? "col-xl-6 col-lg-6 col-md-6" : "col-12"}>
                                             <div className="services-details__content-text3-list">
                                                 <ul>
                                                     {service.features.map((feature) => (
@@ -101,13 +106,7 @@ export default function ServiceDetail({ service }) {
                                     </ol>
                                 </section>
 
-                                <section className="module-record-preview" aria-label={`${service.title} record details`}>
-                                    <div>
-                                        <h2>Inside the Record</h2>
-                                        <p>{service.detailSummary}</p>
-                                        <Link className="thm-btn" href={`/contact?module=${service.slug}`}>See {service.title} in a demo</Link>
-                                    </div>
-                                </section>
+                                
 
                                 <div className="services-details__accrodion">
                                     <div className="faq-one__faq">

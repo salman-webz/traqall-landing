@@ -30,3 +30,13 @@ Source inspection confirms implemented UI behavior, fields, options, and request
 - Portal HTTP request returned 200, but fresh browser inspection produced a blank page and a subsequent navigation timed out. Authenticated portal screens and backend transactions were not verified.
 - Marketing development server started on port 3000; the existing portal listener on port 3001 was left unchanged.
 - Browser checks: homepage, all five module pages, small-issues, FAQ, services, and contact returned 200; three workflow steps and loaded screenshots verified on every module page. All 11 discovered internal link destinations returned successfully. No JavaScript page errors were captured. The Issues page at 390px viewport had no horizontal overflow; its mobile preview was visually inspected.
+
+## Budget (November 4, 2026)
+
+Marketing `/budget` copy was checked against `/Users/salman/Projects/traqallFE/components/budget/ProjectBudgetPage.tsx`, `BudgetEditorTable.tsx`, `BudgetPerformanceTable.tsx`, and `lib/budget/types.ts` / `api.ts`.
+
+Verified: project selection; Performance and Editor tabs; labor, equipment, and materials budgets by cost code; category/project budget, actual, remaining and percentage metrics; searchable/sortable performance table; expandable category breakdowns; save/cancel; unsaved-change guard; financial visibility and edit permissions. Backend cost calculation was not independently verified; copy does not promise forecasting or accounting integrations.
+
+Budget slide artwork is AI-generated and saved locally at `public/assets/images/slider/generated/budget.png`. It is an illustration, not a portal screenshot. The user-provided Budget screenshot was visible in chat but was not accessible as a local attachment file; it has not been substituted with generated UI.
+
+The supplied Budget desktop screenshot is now saved at `public/assets/images/portal/budget.png` and displayed before Budget Capabilities using the shared portal preview. The homepage slider retains its separate generated artwork.
