@@ -19,6 +19,9 @@ export default function Menu() {
                 </li>
 
                 <li>
+                    <Link href="/pricing">Pricing</Link>
+                </li>
+                <li>
                     <Link href="/faq">FAQ</Link>
                 </li>
                 <li>

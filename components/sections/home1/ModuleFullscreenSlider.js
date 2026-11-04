@@ -222,17 +222,21 @@ export default function ModuleFullscreenSlider({
                 })}
             </div>
 
-            {!isMobile && (
-                <div className="module-fullscreen__labels" aria-hidden="true">
+            {!isMobile && onSlideChange && (
+                <nav className="module-fullscreen__labels" aria-label="Slide navigation">
                     {SLIDE_LABELS.map((label, index) => (
-                        <span
+                        <button
                             key={label}
+                            type="button"
                             className={index === activeIndex ? 'is-active' : ''}
+                            aria-label={`Go to ${label}`}
+                            aria-current={index === activeIndex ? 'true' : undefined}
+                            onClick={() => onSlideChange(index)}
                         >
                             {label}
-                        </span>
+                        </button>
                     ))}
-                </div>
+                </nav>
             )}
 
             {onSlideChange && (

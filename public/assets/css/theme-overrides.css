@@ -1647,10 +1647,15 @@ html:has(.home-landing) {
   flex-direction: column;
   gap: 12px;
   z-index: 12;
-  pointer-events: none;
 }
 
-.module-fullscreen__labels span {
+.module-fullscreen__labels button {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  padding: 4px 8px;
+  font-family: inherit;
+  cursor: pointer;
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.1em;
@@ -1662,7 +1667,8 @@ html:has(.home-landing) {
   transition: color 0.3s ease;
 }
 
-.module-fullscreen__labels span.is-active {
+.module-fullscreen__labels button.is-active,
+.module-fullscreen__labels button:hover {
   color: var(--billdins-gold);
 }
 
@@ -2614,11 +2620,12 @@ html:has(.home-landing) {
 .traqall-pricing__options button:focus-visible { outline: 3px solid #344054; outline-offset: 3px; }
 .traqall-pricing__grid { margin-top: 36px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
 .traqall-pricing__card { display: flex; flex-direction: column; padding: 32px; border: 1px solid #e3e8ed; border-radius: 16px; background: white; box-shadow: 0 12px 30px #172b4d08; }
-.traqall-pricing__card h3 { font-size: 26px; margin-bottom: 22px; }
+.traqall-pricing__card h3 { font-size: 26px; margin-bottom: 8px; }
 .traqall-pricing__price { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; margin: 0; }
 .traqall-pricing__price strong { font-size: clamp(34px, 3vw, 46px); line-height: 1.2; color: #171d26; }
-.traqall-pricing__price span, .traqall-pricing__alternative { color: #637084; font-size: 14px; }
-.traqall-pricing__alternative { margin: 12px 0 24px; }
+.traqall-pricing__price span { color: #637084; font-size: 14px; }
+.traqall-pricing__description { color: #637084; margin: 0 0 18px; }
+.traqall-pricing__price { margin-bottom: 24px; }
 .traqall-pricing__card ul { list-style: none; padding: 24px 0 0; border-top: 1px solid #eef0f3; margin: 0 0 32px; flex: 1; }
 .traqall-pricing__card li { display: flex; gap: 12px; margin-bottom: 14px; color: #4d5b70; line-height: 1.55; }
 .traqall-pricing__card li span { color: #26865c; margin-top: 4px; }
@@ -2636,4 +2643,39 @@ html:has(.home-landing) {
     display: block;
     width: 100%;
     height: auto;
+}
+
+.traqall-pricing__comparison { margin-top: 32px; overflow-x: auto; }
+.traqall-pricing__comparison:focus-visible { outline: 3px solid #344054; outline-offset: 3px; }
+.traqall-pricing__comparison table { width: 100%; min-width: 640px; border-collapse: separate; border-spacing: 0; border: 1px solid #e3e8ed; border-radius: 12px; overflow: hidden; background: #fff; color: #344054; font-size: 14px; }
+.traqall-pricing__comparison caption { caption-side: top; padding: 0 0 14px; color: #171d26; font-weight: 600; text-align: left; }
+.traqall-pricing__comparison th, .traqall-pricing__comparison td { padding: 12px 16px; border-bottom: 1px solid #eef0f3; text-align: center; vertical-align: middle; }
+.traqall-pricing__comparison th { font-weight: 600; }
+.traqall-pricing__comparison th:first-child { width: 52%; text-align: left; }
+.traqall-pricing__comparison tbody tr:last-child > * { border-bottom: 0; }
+.traqall-pricing__feature-description { display: block; color: #637084; font-size: 12px; font-weight: 400; line-height: 1.5; margin-top: 3px; }
+
+.traqall-pricing__all-plans { margin-top: 36px; text-align: center; }
+.traqall-pricing__all-plans .thm-btn {
+  background: var(--billdins-black);
+  border-color: var(--billdins-black);
+  color: var(--billdins-white);
+}
+.traqall-pricing__all-plans .thm-btn:hover,
+.traqall-pricing__all-plans .thm-btn:focus-visible {
+  background: var(--billdins-gold) !important;
+  border-color: var(--billdins-gold) !important;
+  color: var(--billdins-white) !important;
+}
+.traqall-pricing__all-plans .thm-btn:hover i,
+.traqall-pricing__all-plans .thm-btn:focus-visible i {
+  background: transparent !important;
+  color: inherit !important;
+}
+
+
+.module-fullscreen__labels button:focus-visible {
+  outline: 2px solid var(--billdins-gold);
+  outline-offset: 3px;
+  border-radius: 3px;
 }
