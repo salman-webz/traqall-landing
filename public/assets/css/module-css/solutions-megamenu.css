@@ -12,8 +12,10 @@
     transform-origin: top center !important;
 }
 
-.solutions-megamenu:hover > ul,
-.stricky-header .solutions-megamenu:hover > ul {
+.main-menu .main-menu__list > .solutions-megamenu.is-open > ul,
+.stricky-header .main-menu__list > .solutions-megamenu.is-open > ul {
+    opacity: 1;
+    visibility: visible;
     transform: scaleY(1) translateZ(0px) !important;
 }
 
@@ -328,3 +330,23 @@
  .solutions-mega__inner { padding: 20px 16px; }
 }
 @media (prefers-reduced-motion: reduce) { .solutions-mega__product-card { transition: none; } }
+
+/* An explicit toggle supports keyboards and touch-enabled desktops. */
+.solutions-menu-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-shrink: 0;
+    width: 15px;
+    height: 44px;
+    margin-left: -15px;
+    align-self: center;
+    color: var(--billdins-black);
+}
+.solutions-menu-toggle .icon-plus-1 { font-size: 10px; line-height: 1; }
+.solutions-megamenu:hover .solutions-menu-toggle { color: var(--billdins-gold); }
+.main-menu .main-menu__list > .solutions-megamenu { display: flex; align-items: center; }
+.main-menu .main-menu__list > .solutions-megamenu > a::after { display: none; }
+.solutions-megamenu > ul[hidden] { display: none; }
+.solutions-megamenu > ul { max-height: calc(100dvh - var(--site-header-height, 100px) - 16px); overflow-y: auto; overscroll-behavior-y: contain; }
+.solutions-menu-toggle:focus-visible { outline: 2px solid #998600; outline-offset: 2px; }

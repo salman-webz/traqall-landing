@@ -206,8 +206,7 @@ button {
   position: relative;
   margin: 0 auto;
   width: 100%;
-  min-width: 300px;
-  overflow: hidden;
+  min-width: 0;
 }
 
 .container {
@@ -4241,7 +4240,8 @@ Main Menu All Responsice Css
 
 @media only screen and (min-width: 1200px) and (max-width: 1400px) {
   .main-header__btn {
-    display: none;
+    display: block;
+    margin-left: 0;
   }
 
   .main-menu__wrapper-inner {

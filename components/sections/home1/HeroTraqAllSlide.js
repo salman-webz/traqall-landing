@@ -82,42 +82,17 @@ export default function HeroTraqAllSlide({ onOpenVideo }) {
 
                                 <div className="main-slider-one__single-video traqall-hero__video">
                                     <div className="main-slider-one__video-link">
-                                        <a
-                                            onClick={onOpenVideo}
-                                            className="video-popup"
-                                            role="button"
-                                            tabIndex={0}
-                                            onKeyDown={(e) => {
-                                                if (
-                                                    e.key === 'Enter' ||
-                                                    e.key === ' '
-                                                ) {
-                                                    onOpenVideo()
-                                                }
-                                            }}
-                                        >
+                                        <button type="button" onClick={onOpenVideo} className="video-popup" aria-label="Play TraqAll overview video">
                                             <div className="main-slider-one__video-icon traqall-hero__play-icon">
                                                 <span className="icon-play-button-arrowhead" />
                                                 <i className="ripple" />
                                             </div>
-                                        </a>
+                                        </button>
                                     </div>
                                     <div className="text">
-                                        <a
-                                            onClick={onOpenVideo}
-                                            role="button"
-                                            tabIndex={0}
-                                            onKeyDown={(e) => {
-                                                if (
-                                                    e.key === 'Enter' ||
-                                                    e.key === ' '
-                                                ) {
-                                                    onOpenVideo()
-                                                }
-                                            }}
-                                        >
+                                        <button type="button" onClick={onOpenVideo}>
                                             See how TraqAll works
-                                        </a>
+                                        </button>
                                     </div>
                                 </div>
                             </div>

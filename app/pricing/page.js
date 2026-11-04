@@ -3,7 +3,7 @@ import Pricing from '@/components/sections/home1/Pricing'
 
 export const metadata = {
     title: 'Pricing | TraqAll',
-    description: 'Compare Basic, Pro, and Business monthly plans, starting at $399/month. Every plan includes all core modules and AI Assistant.',
+    description: 'Compare Basic, Pro, and Business monthly plans, starting at $299/month. Every plan includes all core modules and AI Assistant.',
 }
 
 export default function PricingPage() {

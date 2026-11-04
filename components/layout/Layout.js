@@ -40,12 +40,22 @@ export default function Layout({ headerStyle, footerStyle, headTitle, breadcrumb
         })
         window.wow.init()
 
-        document.addEventListener("scroll", () => {
-            const scrollCheck = window.scrollY > 100
-            if (scrollCheck !== scroll) {
-                setScroll(scrollCheck)
-            }
-        })
+        const syncScroll = () => setScroll(window.scrollY > 100)
+        let viewportWidth = window.innerWidth
+        const closeOnDesktop = () => {
+            const nextWidth = window.innerWidth
+            // Scrollbar removal and the virtual keyboard must not dismiss a drawer.
+            if (nextWidth !== viewportWidth && nextWidth >= 1200) closeMobileMenu()
+            viewportWidth = nextWidth
+        }
+        syncScroll()
+        document.addEventListener('scroll', syncScroll, { passive: true })
+        window.addEventListener('resize', closeOnDesktop)
+        return () => {
+            document.removeEventListener('scroll', syncScroll)
+            window.removeEventListener('resize', closeOnDesktop)
+            window.wow?.stop()
+        }
     }, [])
     return (
         <>

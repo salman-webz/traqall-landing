@@ -45,26 +45,13 @@ export default function Appoinment({ contactPage = false }) {
                         <div className="appoinment-one__contact">
                             <div className="appoinment-one__contact-list">
                                 <ul>
-                                    <li className="wow animated fadeInLeft" data-wow-delay="0.1s">
-                                        <div className="inner">
-                                            <div className="icon-box">
-                                                <span className="icon-placeholder"></span>
-                                            </div>
-                                            <div className="content-box">
-                                                <h2>Get in touch</h2>
-                                                <p>{CONTACT_INFO.email}</p>
-                                                <p>{CONTACT_INFO.website}</p>
-                                            </div>
-                                        </div>
-                                    </li>
-
                                     <li className="wow animated fadeInLeft" data-wow-delay="0.2s">
                                         <div className="inner">
                                             <div className="icon-box">
                                                 <span className="icon-conversation"></span>
                                             </div>
                                             <div className="content-box">
-                                                <h2>Email us</h2>
+                                                <h2>Get in touch</h2>
                                                 <p><Link href={emailHref()}>{CONTACT_INFO.email}</Link></p>
                                                 <p><Link href={emailHref()}>Request a demo anytime</Link></p>
                                             </div>

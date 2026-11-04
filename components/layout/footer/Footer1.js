@@ -1,4 +1,4 @@
-import { CONTACT_INFO, emailHref } from '@/lib/contact-info.mjs'
+import { CONTACT_INFO, emailHref, phoneHref } from '@/lib/contact-info.mjs'
 import Link from "next/link"
 
 export default function Footer1() {
@@ -15,18 +15,6 @@ export default function Footer1() {
                     <div className="site-footer__top-inner">
                         <div className="site-footer__logo">
                             <Link href="/"><img src="assets/images/logo/traqall-logo-darke-bg.png" width="160" height="40" alt="TraqAll"/></Link>
-                        </div>
-
-                        <div className="site-footer__subscribe-form">
-                            <form className="subscribe-form" action="#">
-                                <input type="email" name="email" placeholder="Enter Your Email"/>
-                                <button type="submit" className="thm-btn">Sign up
-                                    <span className="hover-btn hover-bx"></span>
-                                    <span className="hover-btn hover-bx2"></span>
-                                    <span className="hover-btn hover-bx3"></span>
-                                    <span className="hover-btn hover-bx4"></span>
-                                </button>
-                            </form>
                         </div>
 
                         <div className="site-footer__social-links">
@@ -103,6 +91,7 @@ export default function Footer1() {
                                         </div>
 
                                         <div className="text-box">
+                                            <p><Link href={phoneHref()}>{CONTACT_INFO.phones[0]}</Link></p>
                                             <p><Link href="/contact">Schedule a TraqAll Demo</Link></p>
                                             <p><Link href="/faq">Visit Support Center</Link></p>
                                         </div>
@@ -133,11 +122,11 @@ export default function Footer1() {
                         <div className="col-xl-12">
                             <div className="site-footer__bottom-inner">
                                 <div className="site-footer__copyright">
-                                    <p>Copyright@ 2025 <Link href="/">TraqAll</Link>. All Rights Reserved.</p>
+                                    <p>Copyright@ {new Date().getFullYear()} <Link href="/">TraqAll</Link>. All Rights Reserved.</p>
                                 </div>
 
                                 <ul className="site-footer__bottom-menu">
-                                    <li><Link href="/about">Setting & Privacy </Link></li>
+                                    <li><Link href="/terms-and-conditions">Setting & Privacy </Link></li>
                                     <li><Link href="/faq">FAQ</Link></li>
                                     <li><Link href="/contact">Support</Link></li>
                                 </ul>

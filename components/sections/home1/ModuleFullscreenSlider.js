@@ -250,13 +250,12 @@ export default function ModuleFullscreenSlider({
                             {SLIDE_LABELS[activeIndex]}
                         </span>
                     </p>
-                    <div className="module-fullscreen__mobile-nav-dots" role="tablist">
+                    <div className="module-fullscreen__mobile-nav-dots" aria-label="Choose a slide">
                         {SLIDE_LABELS.map((label, index) => (
                             <button
                                 key={label}
                                 type="button"
-                                role="tab"
-                                aria-selected={index === activeIndex}
+                                aria-current={index === activeIndex ? 'true' : undefined}
                                 aria-label={`Go to ${label}`}
                                 className={index === activeIndex ? 'is-active' : ''}
                                 onClick={() => onSlideChange(index)}

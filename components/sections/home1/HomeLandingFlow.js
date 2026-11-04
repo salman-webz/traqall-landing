@@ -71,7 +71,7 @@ export default function HomeLandingFlow() {
     const gesturingRef = useRef(false)
 
     useEffect(() => {
-        const media = window.matchMedia(`(max-width: ${MOBILE_MAX_WIDTH}px)`)
+        const media = window.matchMedia(`(max-width: ${MOBILE_MAX_WIDTH}px), (max-height: 700px)`)
         const syncMobile = () => setIsMobile(media.matches)
         syncMobile()
         media.addEventListener('change', syncMobile)
@@ -231,7 +231,18 @@ export default function HomeLandingFlow() {
         }
     }, [isVideoOpen, isMobile])
 
-    const goToSlide = useCallback((index) => navigationRef.current?.select(index), [])
+    const goToSlide = useCallback((index) => {
+        const changed = navigationRef.current?.select(index)
+        // Compact slides have natural heights. Selecting a shorter slide from
+        // the controls below it must not leave the reader down in the next section.
+        if (changed && isMobile) {
+            const slider = document.querySelector('#home-landing-root .home-landing__slider')
+            if (slider) window.scrollTo({
+                top: Math.max(0, window.scrollY + slider.getBoundingClientRect().top - getHeaderOverlayBottom()),
+                behavior: 'instant',
+            })
+        }
+    }, [isMobile])
 
     return (
         <div id="home-landing-root" className={`home-landing${isMobile ? ' home-landing--mobile' : ''}`}>

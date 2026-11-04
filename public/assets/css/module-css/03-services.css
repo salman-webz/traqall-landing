@@ -18,6 +18,11 @@
     opacity: 0.2;
 }
 
+.services-one .shape1 img {
+    width: 100%;
+    height: auto;
+}
+
 .services-one::before {
     position: absolute;
     top: 0;
@@ -30,7 +35,8 @@
 
 .services-one__carousel {
     position: relative;
-    width: 1610px;
+    width: 100%;
+    min-width: 0;
 }
 
 .services-one__single {

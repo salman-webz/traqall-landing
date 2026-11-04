@@ -10,6 +10,7 @@ import { TRAQALL_SERVICES } from "@/lib/services"
 const MobileMenu = ({ isOpen, onClose }) => {
     const pathname = usePathname()
     const closeButtonRef = useRef(null)
+    const panelRef = useRef(null)
     const pathnameRef = useRef(pathname)
     const [mounted, setMounted] = useState(false)
     const [solutionsOpen, setSolutionsOpen] = useState(false)
@@ -19,22 +20,42 @@ const MobileMenu = ({ isOpen, onClose }) => {
     }, [])
 
     useEffect(() => {
-        if (!isOpen) {
+        if (!isOpen || !mounted) {
             setSolutionsOpen(false)
             return undefined
         }
 
+        const previousFocus = document.activeElement
+        const page = document.getElementById('top')
         closeButtonRef.current?.focus()
+        if (page) page.inert = true
 
         const onKeyDown = (event) => {
             if (event.key === "Escape") {
                 onClose()
             }
+            if (event.key === 'Tab') {
+                const items = [...panelRef.current.querySelectorAll('a[href], button, input, select, textarea, [tabindex="0"]')]
+                    .filter((item) => item.getClientRects().length && getComputedStyle(item).visibility !== 'hidden')
+                if (items.length) {
+                    event.preventDefault()
+                    const current = items.indexOf(document.activeElement)
+                    const next = current < 0 ? (event.shiftKey ? items.length - 1 : 0)
+                        : (current + (event.shiftKey ? -1 : 1) + items.length) % items.length
+                    items[next].focus()
+                }
+            }
         }
 
         document.addEventListener("keydown", onKeyDown)
-        return () => document.removeEventListener("keydown", onKeyDown)
-    }, [isOpen, onClose])
+        return () => {
+            document.removeEventListener("keydown", onKeyDown)
+            if (page) page.inert = false
+            if (previousFocus instanceof HTMLElement && previousFocus.isConnected) {
+                previousFocus.focus({ preventScroll: true })
+            }
+        }
+    }, [isOpen, onClose, mounted])
 
     useEffect(() => {
         if (pathnameRef.current === pathname) {
@@ -66,9 +87,10 @@ const MobileMenu = ({ isOpen, onClose }) => {
                 className="traqall-mobile-nav__overlay"
                 onClick={onClose}
                 aria-label="Close menu"
-                tabIndex={isOpen ? 0 : -1}
+                tabIndex={-1}
             />
             <aside
+                ref={panelRef}
                 className="traqall-mobile-nav__panel"
                 id="traqall-mobile-nav-drawer"
                 role="dialog"
@@ -128,7 +150,7 @@ const MobileMenu = ({ isOpen, onClose }) => {
                                     <i className="fa fa-angle-down" aria-hidden="true" />
                                 </button>
                             </div>
-                            <ul className="traqall-mobile-nav__sublist">
+                            <ul className="traqall-mobile-nav__sublist" hidden={!solutionsOpen}>
                                 <li>
                                     <Link href="/services" className="traqall-mobile-nav__sublink" onClick={handleLinkClick}>
                                         All Solutions
