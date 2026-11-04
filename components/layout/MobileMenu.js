@@ -125,11 +125,6 @@ const MobileMenu = ({ isOpen, onClose }) => {
 
                 <nav className="traqall-mobile-nav__menu" aria-label="Main">
                     <ul className="traqall-mobile-nav__list">
-                        <li className="traqall-mobile-nav__item">
-                            <Link href="/about" className="traqall-mobile-nav__link" onClick={handleLinkClick}>
-                                About
-                            </Link>
-                        </li>
 
                         <li className={`traqall-mobile-nav__item${solutionsOpen ? " is-open" : ""}`}>
                             <div className="traqall-mobile-nav__row">
@@ -173,6 +168,11 @@ const MobileMenu = ({ isOpen, onClose }) => {
                         <li className="traqall-mobile-nav__item">
                             <Link href="/pricing" className="traqall-mobile-nav__link" onClick={handleLinkClick}>
                                 Pricing
+                            </Link>
+                        </li>
+                        <li className="traqall-mobile-nav__item">
+                            <Link href="/about" className="traqall-mobile-nav__link" onClick={handleLinkClick}>
+                                About
                             </Link>
                         </li>
                         <li className="traqall-mobile-nav__item">

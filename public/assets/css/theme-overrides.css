@@ -2604,6 +2604,7 @@ html:has(.home-landing) {
 }
 
 .traqall-pricing__comparison { margin-top: 32px; overflow-x: auto; }
+@media (max-width: 767px) { .traqall-pricing__comparison { display: none; } }
 .traqall-pricing__comparison:focus-visible { outline: 3px solid #344054; outline-offset: 3px; }
 .traqall-pricing__comparison table { width: 100%; min-width: 640px; border-collapse: separate; border-spacing: 0; border: 1px solid #e3e8ed; border-radius: 12px; overflow: hidden; background: #fff; color: #344054; font-size: 14px; }
 .traqall-pricing__comparison caption { caption-side: top; padding: 0 0 14px; color: #171d26; font-weight: 600; text-align: left; }
@@ -2657,6 +2658,15 @@ html:has(.home-landing) {
 .traqall-mobile-nav__sublist[hidden] { display: none; }
 a:focus-visible, button:focus-visible { outline: 2px solid #998600; outline-offset: 4px; }
 @media (max-width: 767px) {
+  .about-one__counter { max-width: none; margin-bottom: 32px; }
+  .about-one__counter-box { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .about-one__counter-box li { min-width: 0; margin: 0; padding: 0 6px; border-bottom: 0; }
+  .about-one__counter-box li + li { border-left: 1px solid #e3e2e2; }
+  .about-one__counter-box li:last-child { padding: 0 6px; }
+  .about-one__counter-box li .count-box h2,
+  .about-one__counter-box li .count-box span { font-size: clamp(26px, 7vw, 34px); line-height: 1.2; }
+  .about-one__counter-box li .text { margin-top: 8px; }
+  .about-one__counter-box li .text p { font-size: clamp(11px, 2.8vw, 14px); line-height: 1.45; overflow-wrap: anywhere; }
   .sec-title__title { font-size: clamp(27px, 6vw, 36px); line-height: 1.25; }
   .sec-title__title br { display: none; }
   .site-footer__bottom-menu a, .footer-widget__list a { display: inline-flex; align-items: center; min-height: 44px; }

@@ -29,9 +29,6 @@ export default function Menu() {
     return (
         <>
             <ul className="main-menu__list">
-                <li>
-                    <Link href="/about">About</Link>
-                </li>
 
                 <li ref={menuRef} className={`dropdown megamenu solutions-megamenu${open ? ' is-open' : ''}`}
                     onPointerEnter={(event) => { if (event.pointerType === 'mouse') setOpen(true) }}
@@ -52,6 +49,9 @@ export default function Menu() {
 
                 <li>
                     <Link href="/pricing">Pricing</Link>
+                </li>
+                <li>
+                    <Link href="/about">About</Link>
                 </li>
                 <li>
                     <Link href="/faq">FAQ</Link>

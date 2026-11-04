@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import PricingComparisonMobile from './PricingComparisonMobile'
 import { PRICING_PLANS, PRICING_MODULES } from '@/lib/pricing-plans'
 
 const dollars = (value) => `$${value.toLocaleString('en-US')}`
@@ -24,6 +25,8 @@ export default function Pricing({ showComparison = false }) {
                     ))}
                 </div>
                 {showComparison ? (
+                    <>
+                    <PricingComparisonMobile />
                     <div className="traqall-pricing__comparison" role="region" aria-label="Compare all features" tabIndex={0}>
                         <table>
                             <caption>Compare all features</caption>
@@ -44,6 +47,7 @@ export default function Pricing({ showComparison = false }) {
                             </tbody>
                         </table>
                     </div>
+                    </>
                 ) : (
                     <div className="traqall-pricing__all-plans">
                         <Link className="thm-btn" href="/pricing">See all plans<i className="icon-next" aria-hidden="true" /></Link>
