@@ -6,7 +6,7 @@ import { TRAQALL_SERVICES } from "@/lib/services"
 
 const swiperOptions = {
     modules: [Pagination, Navigation],
-    slidesPerView: 4,
+    slidesPerView: 5,
     spaceBetween: 30,
     loop: true,
     navigation: {
@@ -23,7 +23,7 @@ const swiperOptions = {
         768: { slidesPerView: 2 },
         992: { slidesPerView: 3 },
         1200: { slidesPerView: 4 },
-        1350: { slidesPerView: 4 },
+        1350: { slidesPerView: 5 },
     }
 }
 
@@ -58,7 +58,7 @@ export default function Service() {
                                         <p>{service.shortDescription}</p>
                                     </div>
                                     <div className="services-one__single-img">
-                                        <img src={`/assets/images/module-cards/${service.slug}.webp`} alt={`${service.title} — TraqAll field operations`} width="1536" height="1024" loading="lazy"/>
+                                        <img src={service.slug === "budget" ? service.image : `/assets/images/module-cards/${service.slug}.webp`} alt={`${service.title} — TraqAll field operations`} width="1536" height="1024" loading="lazy"/>
                                     </div>
                                 </div>
                             </div>

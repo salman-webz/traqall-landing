@@ -23,7 +23,7 @@ export default function AboutPage() {
                                 <img src={SITE_ASSETS.aboutV2Img1} alt="TraqAll timecards and operations on mobile and desktop"/>
                             </div>
 
-                            <div className="about-two__left-bottom">
+                            {/* <div className="about-two__left-bottom">
                                 <div className="about-two__left-bottom-img">
                                     <ul>
                                         <li>
@@ -61,6 +61,15 @@ export default function AboutPage() {
                                 <div className="about-two__left-bottom-text count-box">
                                     <h3>Trusted by construction<br/> teams everywhere</h3>
                                 </div>
+                            </div> */}
+                            <div className="about-two__middle-btn">
+                                <Link className="thm-btn" href="services">Explore modules
+                                    <i className="icon-next"></i>
+                                    <span className="hover-btn hover-bx"></span>
+                                    <span className="hover-btn hover-bx2"></span>
+                                    <span className="hover-btn hover-bx3"></span>
+                                    <span className="hover-btn hover-bx4"></span>
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -107,15 +116,7 @@ export default function AboutPage() {
                                     </li>
                                 </ul>
                             </div>
-                            <div className="about-two__middle-btn">
-                                <Link className="thm-btn" href="services">Explore modules
-                                    <i className="icon-next"></i>
-                                    <span className="hover-btn hover-bx"></span>
-                                    <span className="hover-btn hover-bx2"></span>
-                                    <span className="hover-btn hover-bx3"></span>
-                                    <span className="hover-btn hover-bx4"></span>
-                                </Link>
-                            </div>
+                            
                         </div>
                     </div>
                     {/* Start About Two Middle*/} 

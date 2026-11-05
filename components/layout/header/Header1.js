@@ -1,6 +1,18 @@
-import { CONTACT_INFO, emailHref } from '@/lib/contact-info.mjs'
+import { CONTACT_INFO, emailHref, phoneHref } from '@/lib/contact-info.mjs'
 import Link from "next/link"
 import Menu from "../Menu"
+
+function HeaderPhone() {
+    return (
+        <a className="header-phone" href={phoneHref()} aria-label={`Call TraqAll at ${CONTACT_INFO.phones[0]}`}>
+            <span className="header-phone__icon" aria-hidden="true"><i className="icon-telephone-call" /></span>
+            <span className="header-phone__text">
+                <span className="header-phone__label">Talk to our team</span>
+                <span className="header-phone__number">{CONTACT_INFO.phones[0]}</span>
+            </span>
+        </a>
+    )
+}
 
 export default function Header1({ scroll, isMobileMenu, handleMobileMenu }) {
     return (
@@ -95,6 +107,7 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu }) {
                                 </div>
 
                                 <div className="main-header-one__bottom-right">
+                                    <HeaderPhone />
 
                                     <div className="main-header__btn">
                                         <Link className="thm-btn" href="/contact">Get a Demo
@@ -144,6 +157,7 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu }) {
                                 </div>
 
                                 <div className="main-header-one__bottom-right">
+                                    <HeaderPhone />
 
                                     <div className="main-header__btn">
                                         <Link className="thm-btn" href="/contact">Get a Demo
