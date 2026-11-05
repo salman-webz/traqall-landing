@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { SITE_ASSETS } from '@/lib/site-assets'
 
-export default function Breadcrumb({ breadcrumbTitle }) {
+export default function Breadcrumb({ breadcrumbTitle, breadcrumbDescription }) {
     return (
         <section className="product-hero" style={{ '--hero-image': `url("${SITE_ASSETS.pageHeaderBg}")` }}>
             <div className="container">
@@ -15,6 +15,7 @@ export default function Breadcrumb({ breadcrumbTitle }) {
                         <p className="product-hero__eyebrow">YOUR FIELD. CONNECTED.</p>
                         <h1>{breadcrumbTitle}</h1>
                     </div>
+                    {breadcrumbDescription && <p>{breadcrumbDescription}</p>}
                 </div>
             </div>
         </section>

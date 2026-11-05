@@ -9,7 +9,7 @@ import MobileMenu from "./MobileMenu"
 import Header1 from "./header/Header1"
 import Footer1 from './footer/Footer1'
 
-export default function Layout({ headerStyle, footerStyle, headTitle, breadcrumbTitle, children, wrapperCls }) {
+export default function Layout({ headerStyle, footerStyle, headTitle, breadcrumbTitle, breadcrumbDescription, children, wrapperCls }) {
     const [scroll, setScroll] = useState(0)
     const [isMobileMenu, setMobileMenu] = useState(false)
 
@@ -73,7 +73,7 @@ export default function Layout({ headerStyle, footerStyle, headTitle, breadcrumb
 
                 <Sidebar isSidebar={isSidebar} handleSidebar={handleSidebar} />
 
-                {breadcrumbTitle && <Breadcrumb breadcrumbTitle={breadcrumbTitle} />}
+                {breadcrumbTitle && <Breadcrumb breadcrumbTitle={breadcrumbTitle} breadcrumbDescription={breadcrumbDescription} />}
 
                 {children}
 

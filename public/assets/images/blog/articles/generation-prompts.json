@@ -1,0 +1,179 @@
+{
+  "mode": "Built-in image_gen",
+  "assets": [
+    {
+      "index": 1,
+      "prompt": "Use case: photorealistic-natural. Asset type: landscape editorial cover photograph for a construction field-operations blog. Scene: A construction foreman beside a parked pickup at the end of a shift recording crew hours on a tablet while workers leave the site in the background. Style: realistic professional documentary photography, natural light, muted charcoal and warm neutral palette with yellow safety accents. Landscape 3:2 composition, main subjects centered with enough context for a wide card crop. Believable adult people, realistic hands, appropriate PPE when on a construction site, safe practices. No readable text, no logos, no watermark, no UI overlays. Do not render an article title.",
+      "path": "public/assets/images/blog/articles/01.webp",
+      "source": "/Users/salman/.codex/generated_images/01a1ac89-4e3a-7d70-aff4-00070a68d33b/exec-713028ce-cc8c-41e5-8cd2-2c35281b0f84.png"
+    },
+    {
+      "index": 2,
+      "prompt": "Use case: photorealistic-natural. Asset type: landscape editorial cover photograph for a construction field-operations blog. Scene: Site supervisor recording labor allocation on a clipboard between two clearly distinct work areas: concrete footings and a slab installation, workers safely in the distance. Style: realistic professional documentary photography, natural light, muted charcoal and warm neutral palette with yellow safety accents. Landscape 3:2 composition, main subjects centered with enough context for a wide card crop. Believable adult people, realistic hands, appropriate PPE when on a construction site, safe practices. No readable text, no logos, no watermark, no UI overlays. Do not render an article title.",
+      "path": "public/assets/images/blog/articles/02.webp",
+      "source": "/Users/salman/.codex/generated_images/01a1ac89-4e3a-7d70-aff4-00070a68d33b/exec-6b13cd72-a94a-4299-af6a-be4c4ccfc336.png"
+    },
+    {
+      "index": 3,
+      "prompt": "Use case: photorealistic-natural. Asset type: landscape editorial cover photograph for a construction field-operations blog. Scene: Construction payroll planner at a site office desk separating three groups of time sheets beside a simple desk clock and calculator; emphasize different categories of work hours. Style: realistic professional documentary photography, natural light, muted charcoal and warm neutral palette with yellow safety accents. Landscape 3:2 composition, main subjects centered with enough context for a wide card crop. Believable adult people, realistic hands, appropriate PPE when on a construction site, safe practices. No readable text, no logos, no watermark, no UI overlays. Do not render an article title.",
+      "path": "public/assets/images/blog/articles/03.webp",
+      "source": "/Users/salman/.codex/generated_images/01a1ac89-4e3a-7d70-aff4-00070a68d33b/exec-b349b17e-3c30-444b-97cc-6a174bd24346.png"
+    },
+    {
+      "index": 4,
+      "prompt": "Use case: photorealistic-natural. Asset type: landscape editorial cover photograph for a construction field-operations blog. Scene: Foreman comparing crew roster sheets with timecards at a site trailer desk, a few empty spaces among neatly arranged record cards, workers visible outside. Style: realistic professional documentary photography, natural light, muted charcoal and warm neutral palette with yellow safety accents. Landscape 3:2 composition, main subjects centered with enough context for a wide card crop. Believable adult people, realistic hands, appropriate PPE when on a construction site, safe practices. No readable text, no logos, no watermark, no UI overlays. Do not render an article title.",
+      "path": "public/assets/images/blog/articles/04.webp",
+      "source": "/Users/salman/.codex/generated_images/01a1ac89-4e3a-7d70-aff4-00070a68d33b/exec-e21ada3b-53df-45bc-a414-9ddc0ea41272.png"
+    },
+    {
+      "index": 5,
+      "prompt": "Use case: photorealistic-natural. Asset type: landscape editorial cover photograph for a construction field-operations blog. Scene: Supervisor carefully reviewing a crew time sheet and project drawing before approving it, close view of hands and clipboard on a construction office desk. Style: realistic professional documentary photography, natural light, muted charcoal and warm neutral palette with yellow safety accents. Landscape 3:2 composition, main subjects centered with enough context for a wide card crop. Believable adult people, realistic hands, appropriate PPE when on a construction site, safe practices. No readable text, no logos, no watermark, no UI overlays. Do not render an article title.",
+      "path": "public/assets/images/blog/articles/05.webp",
+      "source": "/Users/salman/.codex/generated_images/01a1ac89-4e3a-7d70-aff4-00070a68d33b/exec-6eacc85b-2103-4778-bd23-4d9cc7149131.png"
+    },
+    {
+      "index": 6,
+      "prompt": "Use case: photorealistic-natural. Asset type: landscape editorial cover photograph for a construction field-operations blog. Scene: Construction worker wearing hardhat and safety vest checking in at a tablet kiosk mounted near a site trailer entrance, coworkers waiting at a respectful distance. Style: realistic professional documentary photography, natural light, muted charcoal and warm neutral palette with yellow safety accents. Landscape 3:2 composition, main subjects centered with enough context for a wide card crop. Believable adult people, realistic hands, appropriate PPE when on a construction site, safe practices. No readable text, no logos, no watermark, no UI overlays. Do not render an article title.",
+      "path": "public/assets/images/blog/articles/06.webp",
+      "source": "/Users/salman/.codex/generated_images/01a1ac89-4e3a-7d70-aff4-00070a68d33b/exec-80139dd5-d699-4140-83b1-c83fc54779cb.png"
+    },
+    {
+      "index": 7,
+      "prompt": "Use case: photorealistic-natural. Asset type: landscape editorial cover photograph for a construction field-operations blog. Scene: Wide equipment yard at dawn with an excavator ready for work and a site supervisor checking machine assignments on a tablet beside it. Style: realistic professional documentary photography, natural light, muted charcoal and warm neutral palette with yellow safety accents. Landscape 3:2 composition, main subjects centered with enough context for a wide card crop. Believable adult people, realistic hands, appropriate PPE when on a construction site, safe practices. No readable text, no logos, no watermark, no UI overlays. Do not render an article title.",
+      "path": "public/assets/images/blog/articles/07.webp",
+      "source": "/Users/salman/.codex/generated_images/01a1ac89-4e3a-7d70-aff4-00070a68d33b/exec-fc758b09-f642-406f-b516-a6d7928483a8.png"
+    },
+    {
+      "index": 8,
+      "prompt": "Use case: photorealistic-natural. Asset type: landscape editorial cover photograph for a construction field-operations blog. Scene: Mechanic in appropriate safety gear servicing a parked excavator in a tidy yard, engine off, open service compartment, maintenance clipboard nearby. Style: realistic professional documentary photography, natural light, muted charcoal and warm neutral palette with yellow safety accents. Landscape 3:2 composition, main subjects centered with enough context for a wide card crop. Believable adult people, realistic hands, appropriate PPE when on a construction site, safe practices. No readable text, no logos, no watermark, no UI overlays. Do not render an article title.",
+      "path": "public/assets/images/blog/articles/08.webp",
+      "source": "/Users/salman/.codex/generated_images/01a1ac89-4e3a-7d70-aff4-00070a68d33b/exec-56ba36d5-36ef-466f-b14d-bb2a6848e8c3.png"
+    },
+    {
+      "index": 9,
+      "prompt": "Use case: photorealistic-natural. Asset type: landscape editorial cover photograph for a construction field-operations blog. Scene: Equipment operator beside a parked loader recording daily machine usage on a clipboard after a shift, peaceful construction site. Style: realistic professional documentary photography, natural light, muted charcoal and warm neutral palette with yellow safety accents. Landscape 3:2 composition, main subjects centered with enough context for a wide card crop. Believable adult people, realistic hands, appropriate PPE when on a construction site, safe practices. No readable text, no logos, no watermark, no UI overlays. Do not render an article title.",
+      "path": "public/assets/images/blog/articles/09.webp",
+      "source": "/Users/salman/.codex/generated_images/01a1ac89-4e3a-7d70-aff4-00070a68d33b/exec-5011436b-8204-4812-833b-0986f9b1fb49.png"
+    },
+    {
+      "index": 10,
+      "prompt": "Use case: photorealistic-natural. Asset type: landscape editorial cover photograph for a construction field-operations blog. Scene: Parked loader isolated from operations with a red maintenance tag and cones, mechanic inspecting from the ground, no active work or danger. Style: realistic professional documentary photography, natural light, muted charcoal and warm neutral palette with yellow safety accents. Landscape 3:2 composition, main subjects centered with enough context for a wide card crop. Believable adult people, realistic hands, appropriate PPE when on a construction site, safe practices. No readable text, no logos, no watermark, no UI overlays. Do not render an article title.",
+      "path": "public/assets/images/blog/articles/10.webp",
+      "source": "/Users/salman/.codex/generated_images/01a1ac89-4e3a-7d70-aff4-00070a68d33b/exec-01412181-64fe-49a3-9983-3cd8d5481cf8.png"
+    },
+    {
+      "index": 11,
+      "prompt": "Use case: photorealistic-natural. Asset type: landscape editorial cover photograph for a construction field-operations blog. Scene: Site receiver counting bundles of reinforcing steel beside a parked delivery truck while a driver holds a delivery clipboard, orderly materials unloading area. Style: realistic professional documentary photography, natural light, muted charcoal and warm neutral palette with yellow safety accents. Landscape 3:2 composition, main subjects centered with enough context for a wide card crop. Believable adult people, realistic hands, appropriate PPE when on a construction site, safe practices. No readable text, no logos, no watermark, no UI overlays. Do not render an article title.",
+      "path": "public/assets/images/blog/articles/11.webp",
+      "source": "/Users/salman/.codex/generated_images/01a1ac89-4e3a-7d70-aff4-00070a68d33b/exec-4b6057a8-add0-4ef0-b808-6e42a942f1b3.png"
+    },
+    {
+      "index": 12,
+      "prompt": "Use case: photorealistic-natural. Asset type: landscape editorial cover photograph for a construction field-operations blog. Scene: Construction site materials sorting area with usable lumber neatly stacked and short offcuts in a separate waste bin, supervisor recording quantities on a clipboard. Style: realistic professional documentary photography, natural light, muted charcoal and warm neutral palette with yellow safety accents. Landscape 3:2 composition, main subjects centered with enough context for a wide card crop. Believable adult people, realistic hands, appropriate PPE when on a construction site, safe practices. No readable text, no logos, no watermark, no UI overlays. Do not render an article title.",
+      "path": "public/assets/images/blog/articles/12.webp",
+      "source": "/Users/salman/.codex/generated_images/01a1ac89-4e3a-7d70-aff4-00070a68d33b/exec-cfff48a5-1c7c-436f-8cba-00e4186282fc.png"
+    },
+    {
+      "index": 13,
+      "prompt": "Use case: photorealistic-natural. Asset type: landscape editorial cover photograph for a construction field-operations blog. Scene: Site storekeeper checking a nearly empty shelf of boxed fasteners next to stocked shelves, holding an inventory tablet in a tidy materials container. Style: realistic professional documentary photography, natural light, muted charcoal and warm neutral palette with yellow safety accents. Landscape 3:2 composition, main subjects centered with enough context for a wide card crop. Believable adult people, realistic hands, appropriate PPE when on a construction site, safe practices. No readable text, no logos, no watermark, no UI overlays. Do not render an article title.",
+      "path": "public/assets/images/blog/articles/13.webp",
+      "source": "/Users/salman/.codex/generated_images/01a1ac89-4e3a-7d70-aff4-00070a68d33b/exec-56b63533-80d8-42f3-a24b-c0ad970d7fce.png"
+    },
+    {
+      "index": 14,
+      "prompt": "Use case: photorealistic-natural. Asset type: landscape editorial cover photograph for a construction field-operations blog. Scene: Materials coordinator matching a delivered pallet of construction supplies with delivery paperwork and project folders at a site receiving station. Style: realistic professional documentary photography, natural light, muted charcoal and warm neutral palette with yellow safety accents. Landscape 3:2 composition, main subjects centered with enough context for a wide card crop. Believable adult people, realistic hands, appropriate PPE when on a construction site, safe practices. No readable text, no logos, no watermark, no UI overlays. Do not render an article title.",
+      "path": "public/assets/images/blog/articles/14.webp",
+      "source": "/Users/salman/.codex/generated_images/01a1ac89-4e3a-7d70-aff4-00070a68d33b/exec-9c9ca268-8834-4395-b73a-ccb18f3a2b72.png"
+    },
+    {
+      "index": 15,
+      "prompt": "Use case: photorealistic-natural. Asset type: landscape editorial cover photograph for a construction field-operations blog. Scene: Construction purchasing coordinator preparing a detailed material order at a site office desk, material sample, plans, calendar and laptop, no readable screen text. Style: realistic professional documentary photography, natural light, muted charcoal and warm neutral palette with yellow safety accents. Landscape 3:2 composition, main subjects centered with enough context for a wide card crop. Believable adult people, realistic hands, appropriate PPE when on a construction site, safe practices. No readable text, no logos, no watermark, no UI overlays. Do not render an article title.",
+      "path": "public/assets/images/blog/articles/15.webp",
+      "source": "/Users/salman/.codex/generated_images/01a1ac89-4e3a-7d70-aff4-00070a68d33b/exec-306cf61e-7069-4abd-a054-ca1092e6a7c8.png"
+    },
+    {
+      "index": 16,
+      "prompt": "Use case: photorealistic-natural. Asset type: landscape editorial cover photograph for a construction field-operations blog. Scene: Project manager and purchasing coordinator reviewing a purchase order together before sending it, desk with calculator and material samples. Style: realistic professional documentary photography, natural light, muted charcoal and warm neutral palette with yellow safety accents. Landscape 3:2 composition, main subjects centered with enough context for a wide card crop. Believable adult people, realistic hands, appropriate PPE when on a construction site, safe practices. No readable text, no logos, no watermark, no UI overlays. Do not render an article title.",
+      "path": "public/assets/images/blog/articles/16.webp",
+      "source": "/Users/salman/.codex/generated_images/01a1ac89-4e3a-7d70-aff4-00070a68d33b/exec-d64dbd8e-be2d-4e11-897b-0a3acd199a4c.png"
+    },
+    {
+      "index": 17,
+      "prompt": "Use case: photorealistic-natural. Asset type: landscape editorial cover photograph for a construction field-operations blog. Scene: Site receiver counting six delivered supply boxes beside a truck with space left for the remaining shipment, clipboard in hand, clearly a partial delivery. Style: realistic professional documentary photography, natural light, muted charcoal and warm neutral palette with yellow safety accents. Landscape 3:2 composition, main subjects centered with enough context for a wide card crop. Believable adult people, realistic hands, appropriate PPE when on a construction site, safe practices. No readable text, no logos, no watermark, no UI overlays. Do not render an article title.",
+      "path": "public/assets/images/blog/articles/17.webp",
+      "source": "/Users/salman/.codex/generated_images/01a1ac89-4e3a-7d70-aff4-00070a68d33b/exec-d662cf1e-7df7-4296-b373-a6162d749ac8.png"
+    },
+    {
+      "index": 18,
+      "prompt": "Use case: photorealistic-natural. Asset type: landscape editorial cover photograph for a construction field-operations blog. Scene: Purchasing coordinator comparing outstanding delivery folders with current inventory sheets, looking toward a construction supply truck outside the office window. Style: realistic professional documentary photography, natural light, muted charcoal and warm neutral palette with yellow safety accents. Landscape 3:2 composition, main subjects centered with enough context for a wide card crop. Believable adult people, realistic hands, appropriate PPE when on a construction site, safe practices. No readable text, no logos, no watermark, no UI overlays. Do not render an article title.",
+      "path": "public/assets/images/blog/articles/18.webp",
+      "source": "/Users/salman/.codex/generated_images/01a1ac89-4e3a-7d70-aff4-00070a68d33b/exec-dc00d545-afb0-4e60-b030-dba087006fbe.png"
+    },
+    {
+      "index": 19,
+      "prompt": "Use case: photorealistic-natural. Asset type: landscape editorial cover photograph for a construction field-operations blog. Scene: Tool room attendant handing a cordless drill to a named worker while recording the handoff on a tablet, organized tool storage in background. Style: realistic professional documentary photography, natural light, muted charcoal and warm neutral palette with yellow safety accents. Landscape 3:2 composition, main subjects centered with enough context for a wide card crop. Believable adult people, realistic hands, appropriate PPE when on a construction site, safe practices. No readable text, no logos, no watermark, no UI overlays. Do not render an article title.",
+      "path": "public/assets/images/blog/articles/19.webp",
+      "source": "/Users/salman/.codex/generated_images/01a1ac89-4e3a-7d70-aff4-00070a68d33b/exec-0fb77d09-d34e-491a-8551-f7d04a7d820d.png"
+    },
+    {
+      "index": 20,
+      "prompt": "Use case: photorealistic-natural. Asset type: landscape editorial cover photograph for a construction field-operations blog. Scene: Workers returning drills and saw cases to a tool cage at the end of shift, attendant checking each item against a clipboard, warm evening light. Style: realistic professional documentary photography, natural light, muted charcoal and warm neutral palette with yellow safety accents. Landscape 3:2 composition, main subjects centered with enough context for a wide card crop. Believable adult people, realistic hands, appropriate PPE when on a construction site, safe practices. No readable text, no logos, no watermark, no UI overlays. Do not render an article title.",
+      "path": "public/assets/images/blog/articles/20.webp",
+      "source": "/Users/salman/.codex/generated_images/01a1ac89-4e3a-7d70-aff4-00070a68d33b/exec-f3d021da-efd1-4f10-8296-a313124df23f.png"
+    },
+    {
+      "index": 21,
+      "prompt": "Use case: photorealistic-natural. Asset type: landscape editorial cover photograph for a construction field-operations blog. Scene: Tool room workbench with a damaged unplugged drill set aside behind a red inspection tag, worker photographing it on a phone, intact tools stored separately. Style: realistic professional documentary photography, natural light, muted charcoal and warm neutral palette with yellow safety accents. Landscape 3:2 composition, main subjects centered with enough context for a wide card crop. Believable adult people, realistic hands, appropriate PPE when on a construction site, safe practices. No readable text, no logos, no watermark, no UI overlays. Do not render an article title.",
+      "path": "public/assets/images/blog/articles/21.webp",
+      "source": "/Users/salman/.codex/generated_images/01a1ac89-4e3a-7d70-aff4-00070a68d33b/exec-5e630662-cba7-4bc8-ab72-99c3bc660ec5.png"
+    },
+    {
+      "index": 22,
+      "prompt": "Use case: photorealistic-natural. Asset type: landscape editorial cover photograph for a construction field-operations blog. Scene: Site supervisor documenting an already cordoned-off uneven walkway with a camera phone, safe distance, no injury, wide view includes location context. Style: realistic professional documentary photography, natural light, muted charcoal and warm neutral palette with yellow safety accents. Landscape 3:2 composition, main subjects centered with enough context for a wide card crop. Believable adult people, realistic hands, appropriate PPE when on a construction site, safe practices. No readable text, no logos, no watermark, no UI overlays. Do not render an article title.",
+      "path": "public/assets/images/blog/articles/22.webp",
+      "source": "/Users/salman/.codex/generated_images/01a1ac89-4e3a-7d70-aff4-00070a68d33b/exec-7f9d1497-d4d5-4b69-9410-e54ea6a56adc.png"
+    },
+    {
+      "index": 23,
+      "prompt": "Use case: photorealistic-natural. Asset type: landscape editorial cover photograph for a construction field-operations blog. Scene: Two site supervisors discussing a cordoned-off walkway repair and assigning follow-up using a clipboard and calendar in a site trailer doorway. Style: realistic professional documentary photography, natural light, muted charcoal and warm neutral palette with yellow safety accents. Landscape 3:2 composition, main subjects centered with enough context for a wide card crop. Believable adult people, realistic hands, appropriate PPE when on a construction site, safe practices. No readable text, no logos, no watermark, no UI overlays. Do not render an article title.",
+      "path": "public/assets/images/blog/articles/23.webp",
+      "source": "/Users/salman/.codex/generated_images/01a1ac89-4e3a-7d70-aff4-00070a68d33b/exec-f82d40d8-bbef-4ee9-a8ab-cf11789a2185.png"
+    },
+    {
+      "index": 24,
+      "prompt": "Use case: photorealistic-natural. Asset type: landscape editorial cover photograph for a construction field-operations blog. Scene: Supervisor inspecting a repaired walkway with a clipboard, second worker pointing to the repaired section, equipment stored safely, focus on verifying completed work. Style: realistic professional documentary photography, natural light, muted charcoal and warm neutral palette with yellow safety accents. Landscape 3:2 composition, main subjects centered with enough context for a wide card crop. Believable adult people, realistic hands, appropriate PPE when on a construction site, safe practices. No readable text, no logos, no watermark, no UI overlays. Do not render an article title.",
+      "path": "public/assets/images/blog/articles/24.webp",
+      "source": "/Users/salman/.codex/generated_images/01a1ac89-4e3a-7d70-aff4-00070a68d33b/exec-986e0668-ebc4-4790-8889-0fa8b96723ee.png"
+    },
+    {
+      "index": 25,
+      "prompt": "Use case: photorealistic-natural. Asset type: landscape editorial cover photograph for a construction field-operations blog. Scene: Project manager and foreman planning a construction budget before work starts, tabletop with building plans, calculator, cost sheets and material samples. Style: realistic professional documentary photography, natural light, muted charcoal and warm neutral palette with yellow safety accents. Landscape 3:2 composition, main subjects centered with enough context for a wide card crop. Believable adult people, realistic hands, appropriate PPE when on a construction site, safe practices. No readable text, no logos, no watermark, no UI overlays. Do not render an article title.",
+      "path": "public/assets/images/blog/articles/25.webp",
+      "source": "/Users/salman/.codex/generated_images/01a1ac89-4e3a-7d70-aff4-00070a68d33b/exec-845f69df-94e4-4c32-ab59-f83770c6c5b1.png"
+    },
+    {
+      "index": 26,
+      "prompt": "Use case: photorealistic-natural. Asset type: landscape editorial cover photograph for a construction field-operations blog. Scene: Project manager and field lead reviewing project spending mid-construction beside plans, calculator and laptop in site office, active unfinished building visible outside. Style: realistic professional documentary photography, natural light, muted charcoal and warm neutral palette with yellow safety accents. Landscape 3:2 composition, main subjects centered with enough context for a wide card crop. Believable adult people, realistic hands, appropriate PPE when on a construction site, safe practices. No readable text, no logos, no watermark, no UI overlays. Do not render an article title.",
+      "path": "public/assets/images/blog/articles/26.webp",
+      "source": "/Users/salman/.codex/generated_images/01a1ac89-4e3a-7d70-aff4-00070a68d33b/exec-1dd8be83-9adb-4856-b0ab-6144bbc834dd.png"
+    },
+    {
+      "index": 27,
+      "prompt": "Use case: photorealistic-natural. Asset type: landscape editorial cover photograph for a construction field-operations blog. Scene: Construction manager tracing a cost overrun across time sheets, equipment logs and delivery tickets spread neatly on desk, thoughtful analytical work. Style: realistic professional documentary photography, natural light, muted charcoal and warm neutral palette with yellow safety accents. Landscape 3:2 composition, main subjects centered with enough context for a wide card crop. Believable adult people, realistic hands, appropriate PPE when on a construction site, safe practices. No readable text, no logos, no watermark, no UI overlays. Do not render an article title.",
+      "path": "public/assets/images/blog/articles/27.webp",
+      "source": "/Users/salman/.codex/generated_images/01a1ac89-4e3a-7d70-aff4-00070a68d33b/exec-8fff0f1b-aba4-4a9c-a3ae-f02bcd874063.png"
+    },
+    {
+      "index": 28,
+      "prompt": "Use case: photorealistic-natural. Asset type: landscape editorial cover photograph for a construction field-operations blog. Scene: Construction office team lead reviewing role assignments with a foreman and office administrator, separate project folders and laptop, collaborative permission planning. Style: realistic professional documentary photography, natural light, muted charcoal and warm neutral palette with yellow safety accents. Landscape 3:2 composition, main subjects centered with enough context for a wide card crop. Believable adult people, realistic hands, appropriate PPE when on a construction site, safe practices. No readable text, no logos, no watermark, no UI overlays. Do not render an article title.",
+      "path": "public/assets/images/blog/articles/28.webp",
+      "source": "/Users/salman/.codex/generated_images/01a1ac89-4e3a-7d70-aff4-00070a68d33b/exec-a0025da6-5368-40e2-b9a5-06a5973aa1b9.png"
+    },
+    {
+      "index": 29,
+      "prompt": "Use case: photorealistic-natural. Asset type: landscape editorial cover photograph for a construction field-operations blog. Scene: New construction project kickoff in a site office: foreman and coordinator organizing project plans, site map, crew roster and supplier folders before first workday. Style: realistic professional documentary photography, natural light, muted charcoal and warm neutral palette with yellow safety accents. Landscape 3:2 composition, main subjects centered with enough context for a wide card crop. Believable adult people, realistic hands, appropriate PPE when on a construction site, safe practices. No readable text, no logos, no watermark, no UI overlays. Do not render an article title.",
+      "path": "public/assets/images/blog/articles/29.webp",
+      "source": "/Users/salman/.codex/generated_images/01a1ac89-4e3a-7d70-aff4-00070a68d33b/exec-7c2ac009-f026-4964-b93e-b6c0afd5184d.png"
+    }
+  ]
+}

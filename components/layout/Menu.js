@@ -38,7 +38,7 @@ export default function Menu() {
                     <button ref={toggleRef} type="button" className="solutions-menu-toggle"
                         aria-label="Toggle Solutions menu" aria-expanded={open} aria-controls={menuId}
                         onClick={() => setOpen((value) => !value)}>
-                        <span className="icon-plus-1" aria-hidden="true" />
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg>
                     </button>
                     <ul id={menuId} hidden={!open}>
                         <li>
@@ -55,6 +55,9 @@ export default function Menu() {
                 </li>
                 <li>
                     <Link href="/faq">FAQ</Link>
+                </li>
+                <li>
+                    <Link href="/blog">Blogs</Link>
                 </li>
                 <li>
                     <Link href="/contact">Contact</Link>

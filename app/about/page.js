@@ -1,410 +1,75 @@
-'use client'
-import { CONTACT_INFO, emailHref } from '@/lib/contact-info.mjs'
-import Layout from "@/components/layout/Layout"
-import About from "@/components/sections/home1/About"
-import Link from "next/link"
-import HowItWorks from "@/components/sections/HowItWorks"
-import { SITE_ASSETS } from "@/lib/site-assets"
-export default function AboutPage() {
-    return (
-        <>
-        <Layout headerStyle={2} footerStyle={1} breadcrumbTitle="About Us">
+import Layout from '@/components/layout/Layout'
+import Link from 'next/link'
+import { TRAQALL_SERVICES } from '@/lib/services'
 
-        <About />
-
-        {/* Start About Two*/} 
-        <section className="about-two">
-            <div className="container">
-                <div className="row">
-                    {/* Start About Two Left*/} 
-                    <div className="col-xl-3 col-lg-6 wow fadeInLeft" data-wow-delay="0ms">
-                        <div className="about-two__left">
-                            <div className="about-two__left-img">
-                                <img src={SITE_ASSETS.aboutV2Img1} alt="TraqAll timecards and operations on mobile and desktop"/>
-                            </div>
-
-                            {/* <div className="about-two__left-bottom">
-                                <div className="about-two__left-bottom-img">
-                                    <ul>
-                                        <li>
-                                            <div className="img-box">
-                                                <img src="assets/images/testimonial/testimonial-v1-img1.png" alt=""/>
-                                            </div>
-                                        </li>
-
-                                        <li>
-                                            <div className="img-box">
-                                                <img src="assets/images/testimonial/testimonial-v1-img2.png" alt=""/>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div className="img-box">
-                                                <img src="assets/images/testimonial/testimonial-v1-img3.png" alt=""/>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div className="img-box">
-                                                <img src="assets/images/testimonial/testimonial-v1-img4.png" alt=""/>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div className="img-box style2">
-                                                <img src="assets/images/testimonial/testimonial-v1-img5.png" alt=""/>
-                                                <div className="icon-box">
-                                                    <Link href="#"><span className="icon-plus-1"></span></Link>
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-
-                                <div className="about-two__left-bottom-text count-box">
-                                    <h3>Trusted by construction<br/> teams everywhere</h3>
-                                </div>
-                            </div> */}
-                            <div className="about-two__middle-btn">
-                                <Link className="thm-btn" href="services">Explore modules
-                                    <i className="icon-next"></i>
-                                    <span className="hover-btn hover-bx"></span>
-                                    <span className="hover-btn hover-bx2"></span>
-                                    <span className="hover-btn hover-bx3"></span>
-                                    <span className="hover-btn hover-bx4"></span>
-                                </Link>
-                            </div>
-                        </div>
-                    </div>
-                    {/* End About Two Left*/} 
-
-                    {/* Start About Two Middle*/} 
-                    <div className="col-xl-5 col-lg-6 wow fadeInRight" data-wow-delay="100ms" data-wow-duration="1500ms">
-                        <div className="about-two__middle">
-                            <div className="sec-title tg-heading-subheading animation-style2">
-                                <div className="sec-title__tagline">
-                                    <div className="left-line"></div>
-                                    <div className="text tg-element-title">
-                                        <h4>About us</h4>
-                                    </div>
-                                </div>
-                                <h2 className="sec-title__title tg-element-title">We Manage Your Mess —<br/> So You Can Manage the Job
-                                </h2>
-                            </div>
-
-                            <div className="about-two__middle-text">
-                                <p>TraqAll is a field-operations platform built for construction teams. We help supervisors, project managers, and crews track timecards, equipment, materials, tools, and site issues from one command center.</p>
-                            </div>
-
-                            <div className="about-two__middle-text2">
-                                <ul>
-                                    <li>
-                                        <div className="icon-box">
-                                            <span className="icon-house"></span>
-                                        </div>
-
-                                        <div className="title-box">
-                                            <h3>Timecards &<br/> crew management</h3>
-                                        </div>
-                                    </li>
-
-                                    <li>
-                                        <div className="icon-box">
-                                            <span className="icon-engineer"></span>
-                                        </div>
-
-                                        <div className="title-box">
-                                            <h3>Equipment &<br/> materials tracking</h3>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                            
-                        </div>
-                    </div>
-                    {/* Start About Two Middle*/} 
-
-                    {/* Start About Two Right*/} 
-                    <div className="col-xl-4 wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
-                        <div className="about-two__right">
-                            <div className="about-two__right-text">
-                                <p>Construction projects generate chaos — scattered timesheets, lost tools, untracked materials, and unresolved site issues. TraqAll brings it all together so your team spends less time chasing data and more time building.
-                                </p>
-                            </div>
-
-                            <div className="about-two__right-img">
-                                <img src={SITE_ASSETS.aboutV2Img2} alt="TraqAll equipment and fleet management dashboard"/>
-                            </div>
-                        </div>
-                    </div>
-                    {/* End About Two Right*/} 
-                </div>
-            </div>
-        </section>
-        {/* End About Two*/} 
-
-        {/* Start Why Choose One*/} 
-        <section className="why-choose-one">
-            <div className="why-choose-one__bg"
-                style={{ backgroundImage: ` url(${SITE_ASSETS.whyChooseBg})` }}></div>
-            <div className="shape1"></div>
-            <div className="shape2"></div>
-            <div className="shape3"></div>
-            <div className="shape4"></div>
-            <div className="shape5"></div>
-            <div className="shape6"></div>
-            <div className="shape7"></div>
-            <div className="shape8"></div>
-            <div className="shape9"></div>
-            <div className="shape10 float-bob-y"><img src="assets/images/shapes/why-choose-v1-shape1.png" alt=""/></div>
-            <div className="container clearfix">
-                <div className="why-choose-one__inner">
-                    <div className="why-choose-one__content">
-                        <div className="sec-title tg-heading-subheading animation-style2">
-                            <div className="sec-title__tagline">
-                                <div className="left-line"></div>
-                                <div className="text tg-element-title">
-                                    <h4>Why TraqAll</h4>
-                                </div>
-                            </div>
-                            <h2 className="sec-title__title tg-element-title">One Platform for Labor,<br/> Assets & Site Operations
-                            </h2>
-                        </div>
-
-                        <div className="why-choose-one__content-text">
-                            <p>From the job site to the office, TraqAll gives construction teams the visibility they need. Track hours by cost code, monitor fleet status, manage inventory, and resolve issues before they become costly delays.</p>
-                        </div>
-
-                        <div className="why-choose-one__content-bottom">
-                            <div className="row">
-                                <div className="col-xl-6 col-lg-6 col-md-6 wow fadeInLeft" data-wow-delay="300ms"
-                                    data-wow-duration="1500ms">
-                                    <div className="why-choose-one__content-single">
-                                        <div className="icon-box">
-                                            <span className="icon-raw-materials"></span>
-                                        </div>
-
-                                        <div className="title-box">
-                                            <h3>Real-Time Field<br/> Visibility</h3>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="col-xl-6 col-lg-6 col-md-6 wow fadeInRight" data-wow-delay="300ms"
-                                    data-wow-duration="1500ms">
-                                    <div className="why-choose-one__content-single">
-                                        <div className="icon-box">
-                                            <span className="icon-support"></span>
-                                        </div>
-
-                                        <div className="title-box">
-                                            <h3>Fast Approvals &<br/> Reporting</h3>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="col-xl-6 col-lg-6 col-md-6 wow fadeInLeft" data-wow-delay="300ms"
-                                    data-wow-duration="1500ms">
-                                    <div className="why-choose-one__content-single">
-                                        <div className="icon-box">
-                                            <span className="icon-income"></span>
-                                        </div>
-
-                                        <div className="title-box">
-                                            <h3>Cost Code<br/> Allocation</h3>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="col-xl-6 col-lg-6 col-md-6 wow fadeInRight" data-wow-delay="300ms"
-                                    data-wow-duration="1500ms">
-                                    <div className="why-choose-one__content-single">
-                                        <div className="icon-box">
-                                            <span className="icon-costumer"></span>
-                                        </div>
-
-                                        <div className="title-box">
-                                            <h3>Built for Construction<br/> Teams</h3>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        {/* End Why Choose One*/} 
-
-        <HowItWorks />
-
-        {/* Start Team Two*/} 
-        <section className="team-two hide">
-            <div className="container">
-                <div className="sec-title center text-center tg-heading-subheading animation-style2">
-                    <div className="sec-title__tagline">
-                        <div className="left-line"></div>
-                        <div className="text tg-element-title">
-                            <h4>Great Team</h4>
-                        </div>
-                        <div className="right-line"></div>
-                    </div>
-                    <h2 className="sec-title__title tg-element-title">The People Behind TraqAll</h2>
-                </div>
-
-                <div className="row">
-
-                    {/* Start Team Two Single*/} 
-                    <div className="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-duration="1500ms">
-                        <div className="team-two__single">
-                            <div className="team-two__single-img">
-                                <img src={SITE_ASSETS.teamV2Img1} alt="Sarah Mitchell"/>
-                            </div>
-
-                            <div className="team-two__single-content">
-                                <div className="team-two__single-content-inner">
-
-                                    <ul className="social-links clearfix">
-                                        <li className="share"><Link href="#"><span className="icon-share"></span></Link>
-                                            <ul className="social-links-inner">
-                                                <li><Link href="#"><i className="icon-facebook-app-symbol"></i></Link></li>
-                                                <li><Link href="#"><i className="icon-twitter1"></i></Link>
-                                                </li>
-                                                <li><Link href="#"><i className="icon-linkedin-big-logo"></i></Link></li>
-                                                <li><Link href="#"><i className="icon-vimeo"></i></Link></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-
-                                    <div className="text-box">
-                                        <h2><Link href="team-details">Sarah Mitchell</Link></h2>
-                                        <p>Product Lead</p>
-                                    </div>
-                                    <div className="number">
-                                        <p><span className="icon-email"></span> <Link href={emailHref(CONTACT_INFO.departments.product)}>{CONTACT_INFO.departments.product}</Link>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                    {/* End Team Two Single*/} 
-
-                    {/* Start Team Two Single*/} 
-                    <div className="col-xl-3 col-lg-6 col-md-6 wow fadeInDown" data-wow-duration="1500ms">
-                        <div className="team-two__single">
-                            <div className="team-two__single-img">
-                                <img src={SITE_ASSETS.teamV2Img2} alt="James Rodriguez"/>
-                            </div>
-
-                            <div className="team-two__single-content">
-                                <div className="team-two__single-content-inner">
-
-                                    <ul className="social-links clearfix">
-                                        <li className="share"><Link href="#"><span className="icon-share"></span></Link>
-                                            <ul className="social-links-inner">
-                                                <li><Link href="#"><i className="icon-facebook-app-symbol"></i></Link></li>
-                                                <li><Link href="#"><i className="icon-twitter1"></i></Link>
-                                                </li>
-                                                <li><Link href="#"><i className="icon-linkedin-big-logo"></i></Link></li>
-                                                <li><Link href="#"><i className="icon-vimeo"></i></Link></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-
-                                    <div className="text-box">
-                                        <h2><Link href="team-details">James Rodriguez</Link></h2>
-                                        <p>Field Operations</p>
-                                    </div>
-                                    <div className="number">
-                                        <p><span className="icon-email"></span> <Link href={emailHref(CONTACT_INFO.departments.fieldops)}>{CONTACT_INFO.departments.fieldops}</Link>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                    {/* End Team Two Single*/} 
-
-                    {/* Start Team Two Single*/} 
-                    <div className="col-xl-3 col-lg-6 col-md-6  wow fadeInUp" data-wow-duration="1500ms">
-                        <div className="team-two__single">
-                            <div className="team-two__single-img">
-                                <img src={SITE_ASSETS.teamV2Img3} alt="Leslie Alexander"/>
-                            </div>
-
-                            <div className="team-two__single-content">
-                                <div className="team-two__single-content-inner">
-
-                                    <ul className="social-links clearfix">
-                                        <li className="share"><Link href="#"><span className="icon-share"></span></Link>
-                                            <ul className="social-links-inner">
-                                                <li><Link href="#"><i className="icon-facebook-app-symbol"></i></Link></li>
-                                                <li><Link href="#"><i className="icon-twitter1"></i></Link>
-                                                </li>
-                                                <li><Link href="#"><i className="icon-linkedin-big-logo"></i></Link></li>
-                                                <li><Link href="#"><i className="icon-vimeo"></i></Link></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-
-                                    <div className="text-box">
-                                        <h2><Link href="team-details">Leslie Alexander</Link></h2>
-                                        <p>Customer Success</p>
-                                    </div>
-                                    <div className="number">
-                                        <p><span className="icon-email"></span> <Link href={emailHref(CONTACT_INFO.departments.success)}>{CONTACT_INFO.departments.success}</Link>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                    {/* End Team Two Single*/} 
-
-                    {/* Start Team Two Single*/} 
-                    <div className="col-xl-3 col-lg-6 col-md-6  wow fadeInDown" data-wow-duration="1500ms">
-                        <div className="team-two__single">
-                            <div className="team-two__single-img">
-                                <img src={SITE_ASSETS.teamV2Img4} alt="Marcus Chen"/>
-                            </div>
-
-                            <div className="team-two__single-content">
-                                <div className="team-two__single-content-inner">
-
-                                    <ul className="social-links clearfix">
-                                        <li className="share"><Link href="#"><span className="icon-share"></span></Link>
-                                            <ul className="social-links-inner">
-                                                <li><Link href="#"><i className="icon-facebook-app-symbol"></i></Link></li>
-                                                <li><Link href="#"><i className="icon-twitter1"></i></Link>
-                                                </li>
-                                                <li><Link href="#"><i className="icon-linkedin-big-logo"></i></Link></li>
-                                                <li><Link href="#"><i className="icon-vimeo"></i></Link></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-
-                                    <div className="text-box">
-                                        <h2><Link href="team-details">Marcus Chen</Link></h2>
-                                        <p>Engineering Lead</p>
-                                    </div>
-                                    <div className="number">
-                                        <p><span className="icon-email"></span> <Link href={emailHref(CONTACT_INFO.departments.engineering)}>{CONTACT_INFO.departments.engineering}</Link>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                    {/* End Team Two Single*/} 
-                </div>
-            </div>
-        </section>
-        {/* End Team Two*/} 
-        </Layout>
-        </>
-    )
+export const metadata = {
+    title: 'About TraqAll | Connected Construction Operations',
+    description: 'Get to know TraqAll: one platform for construction timecards, equipment, materials, tools, project budgets, and issue tracking.',
 }
 
+const moduleDetails = {
+    timecards: { heading: 'Make every hour count.', detail: 'Capture individual or crew time, assign cost codes, and review regular and overtime hours. Move entries through submission and approval, with exports for your office reporting.', points: ['Crew time and project kiosk', 'Cost codes and supervisor review'] },
+    equipment: { heading: 'Keep your equipment working.', detail: 'See equipment status, record project assignments, and track checkouts and returns. Keep usage hours, operator details, and maintenance history connected to each asset.', points: ['Availability and project assignments', 'Usage and maintenance records'] },
+    materials: { heading: 'Know what’s on hand.', detail: 'Organize your material catalog and project stock. Record inventory movements, monitor alert quantities, and keep unit costs and vendor references with your materials.', points: ['Catalogs and project inventory', 'Stock movements and cost details'] },
+    'small-tools': { heading: 'Give every tool a trail.', detail: 'Track portable tools from company inventory to the job site. Manage quantities, checkouts, transfers, and returns, with due dates and records of loss or damage.', points: ['Checkout, return, and transfer', 'Condition and inventory history'] },
+    budget: { heading: 'Connect the work to the cost.', detail: 'Plan labor, equipment, and material budgets by cost code. Compare budgets with actual spending and review remaining amounts at the category and project level.', points: ['Project budgets by cost code', 'Budget, actual, and remaining costs'] },
+    issues: { heading: 'Turn site problems into next steps.', detail: 'Capture issues with the context your team needs. Assign responsibility, set priorities and due dates, and follow comments and status changes through resolution.', points: ['Ownership, priorities, and due dates', 'Related records and activity history'] },
+}
 
+export default function AboutPage() {
+    return (
+        <Layout headerStyle={2} footerStyle={1}>
+            <main className="about-platform">
+                <section className="about-platform__hero">
+                    <div className="container">
+                        <div className="about-platform__hero-grid">
+                            <div>
+                                <p className="about-platform__eyebrow">ABOUT TRAQALL</p>
+                                <h1>Every part of the job.<br /><span>Working together.</span></h1>
+                                <p className="about-platform__lead">Construction runs on people, equipment, materials, and a thousand daily decisions. We bring the records behind that work into one place.</p>
+                                <p>TraqAll connects timecards, equipment, materials, tools, budgets, and issue tracking—helping crews, supervisors, and project managers stay organized from the field to the office.</p>
+                                <div className="about-platform__actions"><Link className="about-platform__button" href="/contact">Meet TraqAll <span aria-hidden="true">↗</span></Link><a href="#what-we-do">Explore what we do <span aria-hidden="true">↓</span></a></div>
+                            </div>
+                            <figure className="about-platform__hero-image">
+                                <img src="/assets/images/about/traqall-field-team.webp" alt="Illustration of site supervisors reviewing a tablet beside construction equipment and materials" width="1536" height="1024" fetchPriority="high" />
+                                <figcaption><span aria-hidden="true" />Built around the work. Connected through TraqAll.</figcaption>
+                            </figure>
+                        </div>
+                        <div className="about-platform__module-strip" aria-label="Our platform modules">{TRAQALL_SERVICES.map(service => <Link key={service.slug} href={`/${service.slug}`}><span className={service.icon} aria-hidden="true" />{service.title === 'Small Tools' ? 'Tools' : service.title}</Link>)}</div>
+                    </div>
+                </section>
+
+                <section className="about-platform__purpose container">
+                    <div><p className="about-platform__eyebrow">WHY WE EXIST</p><h2>The job is connected.<br />Your information should be, too.</h2></div>
+                    <div><p>A crew’s hours affect the budget. Equipment availability shapes the day’s plan. Missing materials or an unresolved issue can hold up the next task. These are all parts of the same job.</p><p>Our focus is to make those daily details easier to record, find, and review. With shared project context across your operations, your team can spend less time piecing together information and more time moving work forward.</p></div>
+                </section>
+
+                <section className="about-platform__modules" id="what-we-do">
+                    <div className="container">
+                        <div className="about-platform__section-heading"><div><p className="about-platform__eyebrow">WHAT WE DO</p><h2>Six essential parts.<br />One connected platform.</h2></div><p>From the first timecard to the latest cost review, TraqAll helps you keep the details of every project in view.</p></div>
+                        <div className="about-platform__cards">{TRAQALL_SERVICES.map((service, index) => {
+                            const detail = moduleDetails[service.slug]
+                            return <article className="about-platform__card" key={service.slug}>
+                                <div className="about-platform__card-top"><span className={`about-platform__icon ${service.icon}`} aria-hidden="true" /><span className="about-platform__number">0{index + 1}</span></div>
+                                <p className="about-platform__module-name">{service.title}</p><h3>{detail.heading}</h3><p>{detail.detail}</p>
+                                <ul>{detail.points.map(point => <li key={point}><span aria-hidden="true">✓</span>{point}</li>)}</ul>
+                                <Link href={`/${service.slug}`}>Explore {service.title.toLowerCase()} <span aria-hidden="true">↗</span></Link>
+                            </article>
+                        })}</div>
+                    </div>
+                </section>
+
+                <section className="about-platform__people container">
+                    <figure><img src="/assets/images/about/traqall-project-planning.webp" alt="Illustration of a project manager reviewing plans in a site office overlooking construction work" width="1536" height="1024" loading="lazy" /></figure>
+                    <div><p className="about-platform__eyebrow">FROM FIELD TO OFFICE</p><h2>Different responsibilities.<br />A shared view of the job.</h2>
+                        <div className="about-platform__role"><h3>For crews & supervisors</h3><p>Record hours, equipment usage, material movements, and site issues with the project context that makes each entry useful.</p></div>
+                        <div className="about-platform__role"><h3>For project managers</h3><p>Review resources, follow open issues, and compare project spending with budgets to understand where attention is needed.</p></div>
+                        <div className="about-platform__role"><h3>For office teams</h3><p>Find organized records, review submitted timecards, and use reports and exports to support your next step.</p></div>
+                    </div>
+                </section>
+
+                <section className="about-platform__closing"><div className="container"><div><p className="about-platform__eyebrow">LET’S TALK ABOUT YOUR WORK</p><h2>Bring the whole job into view.</h2><p>Show us how your team works. We’ll walk you through how TraqAll brings your daily operations together.</p></div><Link className="about-platform__button" href="/contact">Book a demo <span aria-hidden="true">↗</span></Link></div></section>
+            </main>
+        </Layout>
+    )
+}

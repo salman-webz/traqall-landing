@@ -181,6 +181,11 @@ const MobileMenu = ({ isOpen, onClose }) => {
                             </Link>
                         </li>
                         <li className="traqall-mobile-nav__item">
+                            <Link href="/blog" className="traqall-mobile-nav__link" onClick={handleLinkClick}>
+                                Blogs
+                            </Link>
+                        </li>
+                        <li className="traqall-mobile-nav__item">
                             <Link href="/contact" className="traqall-mobile-nav__link" onClick={handleLinkClick}>
                                 Contact
                             </Link>

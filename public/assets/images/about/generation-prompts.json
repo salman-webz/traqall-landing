@@ -1,0 +1,14 @@
+{
+  "mode": "Built-in image_gen",
+  "assets": [
+    {
+      "path": "public/assets/images/about/traqall-field-team.webp",
+      "prompt": "Use case: photorealistic-natural. Asset type: wide editorial photograph for TraqAll construction field operations About page. Primary request: show the connected reality of construction work, people, equipment, materials and tools. Scene: an organized active commercial construction site, two adult site supervisors wearing hard hats and reflective safety vests review a tablet together in the foreground, a parked excavator and neatly stacked construction materials visible behind, a tool case near the work area. Natural believable documentary photography, warm daylight, restrained charcoal and yellow accents, landscape 3:2 composition, realistic hands and safe worksite practices. No text, no logos, no watermarks, no invented software screens."
+    },
+    {
+      "path": "public/assets/images/about/traqall-project-planning.webp",
+      "prompt": "Use case: photorealistic-natural. Asset type: editorial supporting photo for construction field operations software About page. Primary request: construction project manager at a tidy site-office desk reviewing project plans and cost sheets beside a laptop, through a large window an organized construction site and parked equipment can be seen. Adult wearing practical work clothes, hard hat resting on the desk, small material samples and a closed tool case on a shelf. Authentic natural daylight and realistic textures, professional warm neutral palette with subtle yellow accents. Landscape 3:2 composition. No readable text, no logos, no watermark, no fake dashboard or UI overlay. Emphasize the connection between field work and office planning."
+    }
+  ],
+  "note": "AI-generated illustrative editorial imagery; not photographs of actual TraqAll staff or customers."
+}

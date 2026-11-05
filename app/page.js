@@ -18,7 +18,7 @@ export default function Home() {
                 <Appoinment />
                 <HowItWorks />
                 {/* <Faq /> */}
-                {/* <Blog /> */}
+                <Blog />
             </div>
         </Layout>
     )

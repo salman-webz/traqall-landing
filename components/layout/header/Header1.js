@@ -86,7 +86,7 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu }) {
                             <div className="main-menu__wrapper-inner">
                                 <div className="main-header-one__bottom-left">
                                     <div className="logo-one">
-                                        <Link href="/"><img src="assets/images/logo/traqall-logo-light.png" width="160" height="40" alt="TraqAll"/></Link>
+                                        <Link href="/"><img src="/assets/images/logo/traqall-logo-light.png" width="160" height="40" alt="TraqAll"/></Link>
                                     </div>
                                 </div>
 
@@ -136,7 +136,7 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu }) {
                             <div className="main-menu__wrapper-inner">
                                 <div className="main-header-one__bottom-left">
                                     <div className="logo-one">
-                                        <Link href="/"><img src="assets/images/logo/traqall-logo-light.png" width="160" height="40" alt="TraqAll"/></Link>
+                                        <Link href="/"><img src="/assets/images/logo/traqall-logo-light.png" width="160" height="40" alt="TraqAll"/></Link>
                                     </div>
                                 </div>
 

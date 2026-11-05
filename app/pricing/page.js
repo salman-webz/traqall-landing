@@ -7,5 +7,5 @@ export const metadata = {
 }
 
 export default function PricingPage() {
-    return <Layout headerStyle={2} footerStyle={1} breadcrumbTitle="Pricing"><Pricing showComparison /></Layout>
+    return <Layout headerStyle={2} footerStyle={1} breadcrumbTitle="Pricing" breadcrumbDescription="Choose a plan that fits your crew. Bring timecards, equipment, materials, tools, budgets, and issue tracking together in one platform."><Pricing showComparison /></Layout>
 }
